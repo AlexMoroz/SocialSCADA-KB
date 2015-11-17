@@ -1,0 +1,33 @@
+{
+  "name": "kb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "hapi": "^11.1.1",
+    "hapi-auth-basic": "^4.1.0",
+    "hapi-rbac": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://AlexMoroz@github.com/AlexMoroz/SocialSCADA-KB.git"
+  },
+  "keywords": [
+    "scada",
+    "rest",
+    "service"
+  ],
+  "author": "SocialSCADA team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexMoroz/SocialSCADA-KB/issues"
+  },
+  "homepage": "https://github.com/AlexMoroz/SocialSCADA-KB#readme"
+}
