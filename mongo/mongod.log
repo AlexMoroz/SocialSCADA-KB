@@ -1,0 +1,523 @@
+mo2015-11-18T13:46:08.340+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:46:08.351+0100 E NETWORK  [initandlisten] listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:27017
+2015-11-18T13:46:08.351+0100 E NETWORK  [initandlisten]   addr already in use
+2015-11-18T13:46:08.360+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:46:08.361+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:46:08.380+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:46:08.380+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39190 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:46:08.380+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:46:08.381+0100 I INDEX    [initandlisten] allocating new ns file /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/local.ns, filling with zeroes...
+2015-11-18T13:46:08.436+0100 I STORAGE  [FileAllocator] allocating new datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/local.0, filling with zeroes...
+2015-11-18T13:46:08.436+0100 I STORAGE  [FileAllocator] creating directory /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/_tmp
+2015-11-18T13:46:08.660+0100 I STORAGE  [FileAllocator] done allocating datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/local.0, size: 64MB,  took 0.223 secs
+2015-11-18T13:46:08.705+0100 I CONTROL  [initandlisten] now exiting
+2015-11-18T13:46:08.705+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2015-11-18T13:46:08.705+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2015-11-18T13:46:08.706+0100 I NETWORK  [initandlisten] shutdown: going to close sockets...
+2015-11-18T13:46:08.706+0100 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...
+2015-11-18T13:46:08.706+0100 I STORAGE  [initandlisten] shutdown: final commit...
+2015-11-18T13:46:08.709+0100 I JOURNAL  [initandlisten] journalCleanup...
+2015-11-18T13:46:08.709+0100 I JOURNAL  [initandlisten] removeJournalFiles
+2015-11-18T13:46:08.709+0100 I JOURNAL  [initandlisten] Terminating durability thread ...
+2015-11-18T13:46:08.812+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:46:08.812+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:46:08.812+0100 I STORAGE  [initandlisten] shutdown: closing all files...
+2015-11-18T13:46:08.813+0100 I STORAGE  [initandlisten] closeAllFiles() finished
+2015-11-18T13:46:08.813+0100 I STORAGE  [initandlisten] shutdown: removing fs lock...
+2015-11-18T13:46:08.813+0100 I CONTROL  [initandlisten] dbexit:  rc: 48
+2015-11-18T13:47:54.873+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:47:54.883+0100 E NETWORK  [initandlisten] listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:27017
+2015-11-18T13:47:54.883+0100 E NETWORK  [initandlisten]   addr already in use
+2015-11-18T13:47:54.894+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:47:54.894+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:47:54.912+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:47:54.912+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39207 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:47:54.912+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:47:55.003+0100 I CONTROL  [initandlisten] now exiting
+2015-11-18T13:47:55.003+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2015-11-18T13:47:55.003+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2015-11-18T13:47:55.003+0100 I NETWORK  [initandlisten] shutdown: going to close sockets...
+2015-11-18T13:47:55.003+0100 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...
+2015-11-18T13:47:55.003+0100 I STORAGE  [initandlisten] shutdown: final commit...
+2015-11-18T13:47:55.006+0100 I JOURNAL  [initandlisten] journalCleanup...
+2015-11-18T13:47:55.006+0100 I JOURNAL  [initandlisten] removeJournalFiles
+2015-11-18T13:47:55.006+0100 I JOURNAL  [initandlisten] Terminating durability thread ...
+2015-11-18T13:47:55.112+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:47:55.112+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:47:55.112+0100 I STORAGE  [initandlisten] shutdown: closing all files...
+2015-11-18T13:47:55.113+0100 I STORAGE  [initandlisten] closeAllFiles() finished
+2015-11-18T13:47:55.113+0100 I STORAGE  [initandlisten] shutdown: removing fs lock...
+2015-11-18T13:47:55.113+0100 I CONTROL  [initandlisten] dbexit:  rc: 48
+2015-11-18T13:51:21.300+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:51:21.325+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:51:21.325+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:51:21.343+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:51:21.343+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39218 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:51:21.344+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:51:21.344+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:51:21.344+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:51:21.344+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:51:21.344+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:51:21.344+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:51:21.353+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:51:31.850+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:51:31.850+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:51:31.850+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:51:31.850+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:51:31.850+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:51:31.850+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:51:31.851+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:51:31.851+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:51:31.851+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:51:31.851+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:51:31.860+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:51:31.860+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:51:31.860+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:51:31.958+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:51:31.958+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:51:31.958+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:51:31.959+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:51:31.959+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:51:31.959+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:52:17.941+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:52:17.963+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:52:17.963+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:52:17.985+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39231 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:52:17.985+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:52:17.985+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:52:17.995+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:52:32.462+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:52:32.462+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:52:32.462+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:52:32.462+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:52:32.462+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:52:32.472+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:52:32.472+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:52:32.472+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:52:32.565+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:52:32.565+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:52:32.565+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:52:32.565+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:52:32.565+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:52:32.566+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:52:38.011+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:52:38.031+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:52:38.031+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:52:38.056+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39233 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:52:38.056+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:52:38.056+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:52:38.065+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:53:23.780+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:53:23.781+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:53:23.781+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:53:23.781+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:53:23.781+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:53:23.791+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:53:23.791+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:53:23.791+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:53:23.892+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:53:23.892+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:53:23.892+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:53:23.893+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:53:23.893+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:53:23.893+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:55:21.832+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:55:21.853+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:55:21.853+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:55:21.879+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39247 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:55:21.879+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:55:21.879+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:55:21.889+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:55:53.961+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:55:53.961+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:55:53.961+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:55:53.961+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:55:53.961+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:55:53.972+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:55:53.972+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:55:53.972+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:55:54.078+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:55:54.078+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:55:54.078+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:55:54.079+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:55:54.079+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:55:54.079+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:57:21.639+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:57:21.659+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:57:21.659+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:57:21.684+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:57:21.685+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39259 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:57:21.685+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:57:21.790+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:58:26.361+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:58:26.362+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:58:26.362+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:58:26.362+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:58:26.362+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:58:26.364+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:58:26.364+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:58:26.365+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:58:26.472+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:58:26.472+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:58:26.473+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:58:26.473+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:58:26.473+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:58:26.473+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:58:33.867+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:58:33.886+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:58:33.886+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:58:33.907+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39262 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:58:33.907+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:58:33.907+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:58:33.917+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:58:43.010+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:58:43.010+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:58:43.010+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:58:43.010+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:58:43.010+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:58:43.021+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:58:43.021+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:58:43.022+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:58:43.123+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:58:43.123+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:58:43.123+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:58:43.124+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:58:43.124+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:58:43.124+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T13:58:56.649+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T13:58:56.672+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T13:58:56.672+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T13:58:56.697+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T13:58:56.697+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39265 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T13:58:56.697+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T13:58:56.697+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T13:58:56.697+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T13:58:56.698+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T13:58:56.698+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T13:58:56.698+0100 I CONTROL  [initandlisten] options: { config: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T13:58:56.706+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T13:59:01.336+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T13:59:01.336+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T13:59:01.336+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T13:59:01.336+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T13:59:01.336+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T13:59:01.336+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T13:59:01.337+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T13:59:01.337+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T13:59:01.337+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T13:59:01.337+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T13:59:01.347+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T13:59:01.347+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T13:59:01.348+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T13:59:01.443+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T13:59:01.444+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T13:59:01.444+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T13:59:01.444+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T13:59:01.444+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T13:59:01.445+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:01:26.665+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:01:26.727+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:01:26.727+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:01:26.749+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39288 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:01:26.749+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:01:26.749+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:01:26.763+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:02:26.856+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:02:26.856+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:02:26.856+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:02:26.856+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:02:26.856+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:02:26.864+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:02:26.864+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:02:26.864+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:02:26.864+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:02:26.864+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:02:26.866+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:02:26.866+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:02:26.867+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:02:26.970+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:02:26.970+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:02:26.970+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:02:26.971+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:02:26.971+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:02:26.971+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:06:27.935+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:06:27.953+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/journal
+20sudo 15-11-18T14:06:27.953+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:06:27.981+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:06:27.981+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39330 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:06:27.982+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:06:27.982+0100 I INDEX    [initandlisten] allocating new ns file /Users/Alex/Dropbox/Study/SEBA/kb/mongo/local.ns, filling with zeroes...
+2015-11-18T14:06:28.046+0100 I STORAGE  [FileAllocator] allocating new datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/local.0, filling with zeroes...
+2015-11-18T14:06:28.046+0100 I STORAGE  [FileAllocator] creating directory /Users/Alex/Dropbox/Study/SEBA/kb/mongo/_tmp
+2015-11-18T14:06:28.292+0100 I STORAGE  [FileAllocator] done allocating datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/local.0, size: 64MB,  took 0.245 secs
+2015-11-18T14:06:28.420+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:07:20.523+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:07:20.523+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:07:20.523+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:07:20.524+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:07:20.524+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:07:20.524+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:07:20.524+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:07:20.524+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:07:20.524+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:07:20.524+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:07:20.536+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:07:20.536+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:07:20.536+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:07:20.632+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:07:20.632+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:07:20.632+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:07:20.633+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:07:20.633+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:07:20.633+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:12:06.714+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:12:06.737+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:12:06.737+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:12:06.760+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39386 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:12:06.760+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:12:06.760+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:12:06.770+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:12:08.707+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:12:08.707+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:12:08.707+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:12:08.707+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:12:08.707+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:12:08.708+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:12:08.708+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:12:08.708+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:12:08.708+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:12:08.708+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:12:08.719+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:12:08.719+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:12:08.719+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:12:08.819+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:12:08.819+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:12:08.819+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:12:08.820+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:12:08.820+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:12:08.820+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:12:37.659+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:12:37.679+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:12:37.679+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:12:37.702+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39390 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:12:37.702+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:12:37.702+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:12:37.711+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:12:56.019+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:12:56.019+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:12:56.019+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:12:56.019+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:12:56.019+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:12:56.019+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:12:56.020+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:12:56.020+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:12:56.020+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:12:56.020+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:12:56.031+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:12:56.031+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:12:56.031+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:12:56.127+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:12:56.128+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:12:56.128+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:12:56.128+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:12:56.128+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:12:56.128+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:17:52.937+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:17:52.960+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:17:52.960+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:17:52.977+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39397 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:17:52.977+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:17:52.977+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:17:52.986+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:17:54.863+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:17:54.863+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:17:54.863+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:17:54.863+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:17:54.863+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:17:54.875+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:17:54.875+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:17:54.876+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:17:54.971+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:17:54.971+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:17:54.971+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:17:54.972+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:17:54.972+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:17:54.972+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:19:47.978+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:19:47.997+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:19:47.997+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:19:48.022+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:19:48.022+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39420 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:19:48.022+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:19:48.022+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:19:48.022+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:19:48.022+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:19:48.022+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:19:48.023+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:19:48.035+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:19:53.875+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51995 #1 (1 connection now open)
+2015-11-18T14:20:00.066+0100 I NETWORK  [conn1] end connection 127.0.0.1:51995 (0 connections now open)
+2015-11-18T14:20:40.318+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52002 #2 (1 connection now open)
+2015-11-18T14:20:40.332+0100 I INDEX    [conn2] allocating new ns file /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/socialscada.ns, filling with zeroes...
+2015-11-18T14:20:40.398+0100 I STORAGE  [FileAllocator] allocating new datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/socialscada.0, filling with zeroes...
+2015-11-18T14:20:40.398+0100 I STORAGE  [FileAllocator] creating directory /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/_tmp
+2015-11-18T14:20:40.622+0100 I STORAGE  [FileAllocator] done allocating datafile /Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/socialscada.0, size: 64MB,  took 0.223 secs
+2015-11-18T14:20:40.663+0100 I COMMAND  [conn2] command socialscada.$cmd command: create { create: "user", autoIndexId: false } keyUpdates:0 writeConflicts:0 numYields:0 reslen:37 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, MMAPV1Journal: { acquireCount: { w: 6 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 81 } }, Database: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 2 } } } 331ms
+2015-11-18T14:20:40.688+0100 I NETWORK  [conn2] end connection 127.0.0.1:52002 (0 connections now open)
+2015-11-18T14:20:53.413+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:20:53.413+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:20:53.413+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:20:53.413+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:20:53.413+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:20:53.418+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:20:53.418+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:20:53.418+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:20:53.529+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:20:53.530+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:20:53.530+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:20:53.531+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:20:53.531+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:20:53.531+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
+2015-11-18T14:21:19.867+0100 I CONTROL  ***** SERVER RESTARTED *****
+2015-11-18T14:21:19.888+0100 I JOURNAL  [initandlisten] journal dir=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db/journal
+2015-11-18T14:21:19.888+0100 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2015-11-18T14:21:19.909+0100 I JOURNAL  [durability] Durability thread started
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] MongoDB starting : pid=39436 port=27017 dbpath=/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db 64-bit host=8.221.eduroam.dynamic.rbg.tum.de
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] db version v3.0.7
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-11-18T14:21:19.909+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] build info: Darwin yosemitevm.local 14.5.0 Darwin Kernel Version 14.5.0: Wed Jul 29 02:26:53 PDT 2015; root:xnu-2782.40.9~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] allocator: system
+2015-11-18T14:21:19.909+0100 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/Alex/Dropbox/Study/SEBA/kb/mongo/mongod.log" } }
+2015-11-18T14:21:19.928+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-11-18T14:21:30.628+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52004 #1 (1 connection now open)
+2015-11-18T14:21:49.125+0100 I NETWORK  [conn1] end connection 127.0.0.1:52004 (0 connections now open)
+2015-11-18T14:21:49.966+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52005 #2 (1 connection now open)
+2015-11-18T14:21:51.688+0100 I NETWORK  [conn2] end connection 127.0.0.1:52005 (0 connections now open)
+2015-11-18T14:21:56.437+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52006 #3 (1 connection now open)
+2015-11-18T14:21:59.171+0100 I NETWORK  [conn3] end connection 127.0.0.1:52006 (0 connections now open)
+2015-11-18T14:22:15.367+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52009 #4 (1 connection now open)
+2015-11-18T14:22:15.368+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52010 #5 (2 connections now open)
+2015-11-18T14:22:15.368+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52011 #6 (3 connections now open)
+2015-11-18T14:22:15.368+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52012 #7 (4 connections now open)
+2015-11-18T14:22:15.368+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52013 #8 (5 connections now open)
+2015-11-18T14:25:05.106+0100 I NETWORK  [conn7] end connection 127.0.0.1:52012 (4 connections now open)
+2015-11-18T14:25:05.106+0100 I NETWORK  [conn8] end connection 127.0.0.1:52013 (4 connections now open)
+2015-11-18T14:25:05.106+0100 I NETWORK  [conn6] end connection 127.0.0.1:52011 (4 connections now open)
+2015-11-18T14:25:05.106+0100 I NETWORK  [conn5] end connection 127.0.0.1:52010 (3 connections now open)
+2015-11-18T14:25:05.106+0100 I NETWORK  [conn4] end connection 127.0.0.1:52009 (3 connections now open)
+2015-11-18T14:25:08.197+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2015-11-18T14:25:08.197+0100 I CONTROL  [signalProcessingThread] now exiting
+2015-11-18T14:25:08.197+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2015-11-18T14:25:08.197+0100 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2015-11-18T14:25:08.197+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2015-11-18T14:25:08.198+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2015-11-18T14:25:08.199+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2015-11-18T14:25:08.199+0100 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2015-11-18T14:25:08.199+0100 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2015-11-18T14:25:08.199+0100 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2015-11-18T14:25:08.203+0100 I JOURNAL  [signalProcessingThread] journalCleanup...
+2015-11-18T14:25:08.203+0100 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2015-11-18T14:25:08.203+0100 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2015-11-18T14:25:08.311+0100 I JOURNAL  [journal writer] Journal writer thread stopped
+2015-11-18T14:25:08.311+0100 I JOURNAL  [durability] Durability thread stopped
+2015-11-18T14:25:08.311+0100 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2015-11-18T14:25:08.313+0100 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2015-11-18T14:25:08.313+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2015-11-18T14:25:08.313+0100 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
