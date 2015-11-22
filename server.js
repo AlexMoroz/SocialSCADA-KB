@@ -1,9 +1,27 @@
 'use strict';
 var Hapi = require('hapi');
 var Bcrypt = require('bcrypt');
+var Path = require('path');
+var Hoek = require('hoek');
 
 var server = new Hapi.Server();
-server.connection({port: 8080});
+server.connection({host: 'localhost', port: 8080});
+server.register(require('vision'), function (err) {
+
+    Hoek.assert(!err, err);
+
+    server.views({
+        engines: {
+            html: require('handlebars')
+        },
+        relativeTo: __dirname,
+        path: './views',
+        layout: true,
+        layoutPath: Path.join(__dirname, 'views/layout'),
+        //layoutPath: './views/layout',
+        helpersPath: './views/helpers'
+    });
+});
 
 //connecting to mongodb with mongoose
 var mongoose = require('mongoose');
@@ -34,11 +52,7 @@ var users = {
 
 var home = function (request, reply) {
 
-    reply('<html><head><title>Login page</title></head><body><h3>Welcome '
-        + request.auth.credentials.name
-        + '!</h3><br/><form method="get" action="/logout">'
-        + '<input type="submit" value="Logout">'
-        + '</form></body></html>');
+    return reply.view('home', { title: "Home Page", name: request.auth.credentials.name });
 };
 
 var login = function (request, reply) {
@@ -66,15 +80,9 @@ var login = function (request, reply) {
         }
     }
 
-    if (request.method === 'get' ||
-        message) {
+    if (request.method === 'get' || message) {
 
-        return reply('<html><head><title>Login page</title></head><body>'
-            + (message ? '<h3>' + message + '</h3><br/>' : '')
-            + '<form method="post" action="/login">'
-            + 'Username: <input type="text" name="username"><br>'
-            + 'Password: <input type="password" name="password"><br/>'
-            + '<input type="submit" value="Login"></form></body></html>');
+        return reply.view('login', { title: "Login Page", message: message });
     }
 
     request.auth.session.set(account);
