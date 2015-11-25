@@ -1,4 +1,7 @@
-app.controller('loginCtrl', function($scope, $http, $location) {
+app.controller('homeCtrl', function($scope) {
+    console.log(name);
+    $scope.name = name;
+}).controller('loginCtrl', function($scope, $http, $location) {
     $scope.submit = function() {
         $http.post('/login', $scope.formData)
             .success(function(data) {
