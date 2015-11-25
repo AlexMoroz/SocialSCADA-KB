@@ -1,41 +1,37 @@
 'use strict';
-var Hapi = require('hapi');
-var Bcrypt = require('bcrypt');
-var Path = require('path');
-var Hoek = require('hoek');
+var Hapi = require('hapi'),
+    Bcrypt = require('bcrypt'),
+    Path = require('path'),
+    //Hoek = require('hoek'),
+    Routes = require('./app/routes'),
+    Db = require('./config/db'),
+    Config = require('./config/config');
+
+var app = {};
+app.config = Config;
 
 var server = new Hapi.Server();
-server.connection({host: 'localhost', port: 8080});
-server.register(require('vision'), function (err) {
 
-    Hoek.assert(!err, err);
-
-    server.views({
-        engines: {
-            html: require('handlebars')
-        },
-        relativeTo: __dirname,
-        path: './views',
-        layout: true,
-        layoutPath: Path.join(__dirname, 'views/layout'),
-        //layoutPath: './views/layout',
-        helpersPath: './views/helpers'
-    });
-});
-
-//connecting to mongodb with mongoose
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/socialscada');
-var db = mongoose.connection;
-//check if connection is successful
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (callback) {
-    // yay!
-    console.log("connected", callback);
-});
+server.connection({ host: app.config.server.host, port: app.config.server.port });
 
 
-/*------testing staff------*/
+//server.register(require('vision'), function (err) {
+//
+//    Hoek.assert(!err, err);
+//
+//    server.views({
+//        engines: {
+//            html: require('handlebars')
+//        },
+//        relativeTo: __dirname,
+//        path: './views',
+//        layout: true,
+//        layoutPath: Path.join(__dirname, 'views/layout'),
+//        //layoutPath: './views/layout',
+//        helpersPath: './views/helpers'
+//    });
+//});
+
 var users = {
     johnny: {
         username: 'john',
@@ -50,51 +46,6 @@ var users = {
     }
 };
 
-var home = function (request, reply) {
-
-    return reply.view('home', { title: "Home Page", name: request.auth.credentials.name });
-};
-
-var login = function (request, reply) {
-
-    if (request.auth.isAuthenticated) {
-        return reply.redirect('/');
-    }
-
-    var message = '';
-    var account = null;
-
-    if (request.method === 'post') {
-
-        if (!request.payload.username || !request.payload.password) {
-
-            message = 'Missing username or password';
-        }
-        else {
-            account = users[request.payload.username];
-            if (!account ||
-                account.password !== request.payload.password) {
-
-                message = 'Invalid username or password';
-            }
-        }
-    }
-
-    if (request.method === 'get' || message) {
-
-        return reply.view('login', { title: "Login Page", message: message });
-    }
-
-    request.auth.session.set(account);
-    return reply.redirect('/');
-};
-
-var logout = function (request, reply) {
-
-    request.auth.session.clear();
-    return reply.redirect('/');
-};
-
 var validate = function (request, username, password, callback) {
     var user = users[username];
     if (!user) {
@@ -105,7 +56,6 @@ var validate = function (request, username, password, callback) {
         callback(err, isValid, {id: user.id, name: user.name});
     });
 };
-/*------testing staff------*/
 
 
 server.register([{
@@ -120,7 +70,11 @@ server.register([{
             }
         }]
     }
-}, {
+},
+    {
+        register: require('inert')
+    },
+    {
     //basic authentication
     register: require('hapi-auth-basic')
 }, {
@@ -142,66 +96,11 @@ server.register([{
     });
 
     server.auth.strategy('simple', 'basic', {validateFunc: validate});
-    server.route([{
-        method: 'GET',
-        path: '/superuser',
-        config: {
-            auth: 'simple',
-            handler: function (request, reply) {
-                reply('hello, ' + request.auth.credentials.name);
-            },
-            plugins: {
-                rbac: {
-                    target: ['any-of', {type: 'group', value: 'readers'}],
-                    apply: 'deny-overrides', // Combinatory algorithm
-                    rules: [
-                        {
-                            target: ['any-of', {type: 'username', value: 'bad_guy'}],
-                            effect: 'deny'
-                        },
-                        {
-                            effect: 'permit'
-                        }
-                    ]
-                }
-            }
-        }
-    },
-        {
-            method: 'GET',
-            path: '/',
-            config: {
-                handler: home,
-                auth: 'session'
-            }
-        },
-        {
-            method: ['GET', 'POST'],
-            path: '/login',
-            config: {
-                handler: login,
-                auth: {
-                    mode: 'try',
-                    strategy: 'session'
-                },
-                plugins: {
-                    'hapi-auth-cookie': {
-                        redirectTo: false
-                    }
-                }
-            }
-        },
-        {
-            method: 'GET',
-            path: '/logout',
-            config: {
-                handler: logout,
-                auth: 'session'
-            }
-        }]);
 
 
     server.start(function () {
         server.log('info', 'Server running at: ' + server.info.uri);
     });
 });
+
+server.route(Routes.endpoints);

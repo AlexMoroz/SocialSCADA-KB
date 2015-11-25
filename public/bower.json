@@ -1,0 +1,13 @@
+{
+  "name": "SocialSCADA-KB",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-resource": "~1.4.8"
+  }
+}

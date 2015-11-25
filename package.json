@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "angular": "^1.4.8",
+    "angular-resource": "^1.4.8",
+    "angular-route": "^1.4.8",
     "bcrypt": "^0.8.5",
+    "boom": "^3.0.0",
     "good": "^6.4.0",
     "good-console": "^5.2.0",
     "handlebars": "^4.0.5",
@@ -13,6 +17,8 @@
     "hapi-auth-cookie": "^3.1.0",
     "hapi-rbac": "^0.2.0",
     "hoek": "^3.0.4",
+    "inert": "^3.2.0",
+    "joi": "^7.0.0",
     "mongoose": "^4.2.6",
     "path": "^0.12.7",
     "vision": "^4.0.1"
