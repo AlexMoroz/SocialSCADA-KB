@@ -12,6 +12,14 @@ var app = angular.module('socialscadakb', ['ngRoute', 'ngResource'])
         $routeProvider.when('/home', {
             templateUrl: '/public/partials/home.html',
             controller: 'homeCtrl',
+        }),
+        $routeProvider.when('/createToDoListTemplates', {
+            templateUrl: '/public/partials/createToDoListTemplates.html',
+            controller: 'createToDoListTemplatesCtrl',
+        }),
+        $routeProvider.when('/manageToDoListTemplates', {
+            templateUrl: '/public/partials/manageToDoListTemplates.html',
+            controller: 'manageToDoListTemplatesCtrl',
         });
         $routeProvider.otherwise({redirectTo: '/'});
     });

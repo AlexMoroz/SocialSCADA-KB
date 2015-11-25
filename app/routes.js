@@ -1,6 +1,7 @@
 var User = require('./controller/user'),
     Login = require('./controller/login'),
-    Static = require('./static');
+    Static = require('./static'),
+    ToDoListTemplates = require('./controller/toDoListTemplates');
 
 exports.endpoints = [
 
@@ -13,5 +14,6 @@ exports.endpoints = [
     {method: 'GET', path: '/login', config: Login.login},
     {method: 'POST', path: '/login', config: Login.login},
     {method: 'GET', path: '/logout', config: Login.logout},
-    {method: 'GET', path: '/superuser', config: Login.superuser}
+    {method: 'GET', path: '/superuser', config: Login.superuser},
+    {method: 'GET', path: '/createToDoListTemplates', config: ToDoListTemplates.createToDoListTemplates}
 ];
