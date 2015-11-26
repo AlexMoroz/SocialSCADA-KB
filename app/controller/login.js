@@ -59,7 +59,7 @@ exports.login = {
         }
 
         request.auth.session.set(account);
-        return reply({ success: true, name: request.auth.credentials.name });
+        return reply({ success: true, name: request.payload.username });
     },
     auth: {mode: 'try', strategy: 'session'},
     plugins: {'hapi-auth-cookie': {redirectTo: false}}
@@ -68,7 +68,6 @@ exports.login = {
 exports.logout = {
     handler: function (request, reply) {
         request.auth.session.clear();
-        //return reply.redirect('/');
         return reply({ message: "logout"});
     },
     auth: 'session'
