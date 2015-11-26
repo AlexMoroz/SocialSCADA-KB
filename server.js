@@ -2,7 +2,7 @@
 var Hapi = require('hapi'),
     Bcrypt = require('bcrypt'),
     Path = require('path'),
-    //Hoek = require('hoek'),
+//Hoek = require('hoek'),
     Routes = require('./app/routes'),
     Db = require('./config/db'),
     Config = require('./config/config');
@@ -12,25 +12,18 @@ app.config = Config;
 
 var server = new Hapi.Server();
 
-server.connection({ host: app.config.server.host, port: app.config.server.port });
+server.connection({host: app.config.server.host, port: app.config.server.port});
 
-
-//server.register(require('vision'), function (err) {
-//
-//    Hoek.assert(!err, err);
-//
-//    server.views({
-//        engines: {
-//            html: require('handlebars')
-//        },
-//        relativeTo: __dirname,
-//        path: './views',
-//        layout: true,
-//        layoutPath: Path.join(__dirname, 'views/layout'),
-//        //layoutPath: './views/layout',
-//        helpersPath: './views/helpers'
-//    });
-//});
+//start mongo for alex, ignore, don't delete
+var exec = require('child_process').exec, child;
+child = exec('./mongo/startMongo.sh',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+            console.log('exec error: ' + error);
+        }
+    });
 
 var users = {
     johnny: {
@@ -75,15 +68,15 @@ server.register([{
         register: require('inert')
     },
     {
-    //basic authentication
-    register: require('hapi-auth-basic')
-}, {
-    //role based access control
-    register: require('hapi-rbac')
-}, {
-    //session cookie management
-    register: require('hapi-auth-cookie')
-}], function (err) {
+        //basic authentication
+        register: require('hapi-auth-basic')
+    }, {
+        //role based access control
+        register: require('hapi-rbac')
+    }, {
+        //session cookie management
+        register: require('hapi-auth-cookie')
+    }], function (err) {
     if (err) {
         throw err; // something bad happened loading the plugin
     }

@@ -1,5 +1,7 @@
 'use strict';
 
+//TODO: add rbac
+
 var Joi = require('joi'),
     Boom = require('boom'),
     User = require('../model/user').User,
