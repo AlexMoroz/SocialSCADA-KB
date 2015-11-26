@@ -51,19 +51,20 @@ var validate = function (request, username, password, callback) {
 };
 
 
-server.register([{
-    //log service
-    register: require('good'),
-    options: {
-        reporters: [{
-            reporter: require('good-console'),
-            events: {
-                response: '*',
-                log: '*'
-            }
-        }]
-    }
-},
+server.register([
+    {
+        //log service
+        register: require('good'),
+        options: {
+            reporters: [{
+                reporter: require('good-console'),
+                events: {
+                    response: '*',
+                    log: '*'
+                }
+            }]
+        }
+    },
     {
         register: require('inert')
     },

@@ -1,7 +1,7 @@
 'use strict';
 
 /* defining the app */
-var app = angular.module('socialscadakb', ['ngRoute', 'ngResource'])
+var app = angular.module('socialscadakb', ['ngRoute', 'ngResource', 'ngMaterial'])
     .config(function($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: '/public/views/login.html',
@@ -18,6 +18,10 @@ var app = angular.module('socialscadakb', ['ngRoute', 'ngResource'])
         $routeProvider.when('/manageToDoListTemplates', {
             templateUrl: '/public/views/manageToDoListTemplates.html',
             controller: 'manageToDoListTemplatesCtrl'
+        }),
+        $routeProvider.when('/manageToDoListTemplates', {
+            templateUrl: '/public/views/createNewUser.html',
+            controller: 'createNewUser'
         });
         $routeProvider.otherwise({redirectTo: '/'});
     });
