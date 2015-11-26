@@ -22,7 +22,7 @@ var app = angular.module('socialscadakb', ['ngRoute', 'ngResource', 'ngMaterial'
         $routeProvider.when('/manageToDoListTemplates', {
             templateUrl: '/public/views/createNewUser.html',
             controller: 'createNewUser'
-            }),
+        }),
         $routeProvider.when('/createSensor', {
             templateUrl: '/public/views/createSensor.html',
             controller: 'sensorCtrl'
