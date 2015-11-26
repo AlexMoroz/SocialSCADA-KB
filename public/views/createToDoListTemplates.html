@@ -1,17 +1,25 @@
-<form class="ui form">
-  <div class="field">
-    <label>First Name</label>
-    <input name="first-name" placeholder="First Name" type="text">
-  </div>
-  <div class="field">
-    <label>Last Name</label>
-    <input name="last-name" placeholder="Last Name" type="text">
-  </div>
-  <div class="field">
-    <div class="ui checkbox">
-      <input class="hidden" tabindex="0" type="checkbox">
-      <label>I agree to the Terms and Conditions</label>
-    </div>
-  </div>
-  <button class="ui button" type="submit">Submit</button>
-</form>
+<link rel="stylesheet" href="/public/css/login.css">
+<div ng-controller="createToDoListTemplatesCtrl" layout="column" ng-cloak class="md-inline-form">
+    <md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
+        <md-input-container class="input">
+            <label>Alarmtype</label>
+            <md-select name="alarmtype">
+                <md-option>Fire</md-option>
+                <md-option>No Energy</md-option>
+                <md-option>Too cold</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="input">
+            <label>Sensor</label>
+            <md-select name="sensor">
+                <md-option>Building xyz, Room 21</md-option>
+                <md-option>Building abc, Room 12</md-option>
+            </md-select>
+        </md-input-container>
+        <md-input-container class="input">
+            <label>User</label>
+            <input type="text"><span class="highlight"></span><span class="bar"></span>
+        </md-input-container>
+        <button class="ui button" type="submit">Submit</button>
+    </md-content>
+</div>
