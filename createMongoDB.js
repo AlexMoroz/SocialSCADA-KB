@@ -7,11 +7,11 @@ db.getCollectionNames().forEach(function(c) { if (c.indexOf("system.") == -1) db
 
 // create db and collections
 print('... start creating collections.')
-db.createCollection("user",{autoIndexId:false});
-db.createCollection("todolist_template",{autoIndexId:false});
-db.createCollection("todolist",{autoIndexId:false});
-db.createCollection("event",{autoIndexId:false});
-db.createCollection("sensor",{autoIndexId:false});
+db.createCollection("user",{autoIndexId:true});
+db.createCollection("todolist_template",{autoIndexId:true});
+db.createCollection("todolist",{autoIndexId:true});
+db.createCollection("event",{autoIndexId:true});
+db.createCollection("sensor",{autoIndexId:true});
 
 print('Collections created:');
 printjson(db.getCollectionNames());

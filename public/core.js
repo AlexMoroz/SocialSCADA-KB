@@ -18,6 +18,10 @@ var app = angular.module('socialscadakb', ['ngRoute', 'ngResource'])
         $routeProvider.when('/manageToDoListTemplates', {
             templateUrl: '/public/views/manageToDoListTemplates.html',
             controller: 'manageToDoListTemplatesCtrl'
+        }),
+        $routeProvider.when('/createSensor', {
+            templateUrl: '/public/views/createSensor.html',
+            controller: 'sensorCtrl'
         });
         $routeProvider.otherwise({redirectTo: '/'});
     });
