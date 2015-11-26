@@ -1,24 +1,28 @@
-<link rel="stylesheet" href="/public/css/login.css">
-<form ng-submit="submit()" class="login" ng-controller="loginCtrl">
-    <md-input-container class="input">
-        <label>Username</label>
-        <input type="text" ng-model="formData.username" required md-maxlength="100">
-        <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-            <div ng-message="required">This is required!</div>
-            <div ng-message="md-maxlength">That's too long!</div>
-            <div ng-message="minlength">That's too short!</div>
-        </div>
-    </md-input-container>
-    <md-input-container class="input">
-        <label>Password</label>
-        <input type="text" ng-model="formData.password" required md-maxlength="100">
-        <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-            <div ng-message="required">This is required!</div>
-            <div ng-message="md-maxlength">That's too long!</div>
-            <div ng-message="minlength">That's too short!</div>
-        </div>
-    </md-input-container>
-    <button type="submit" class="button buttonBlue">Login
-        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-    </button>
-</form>
+<div class="login">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <form ng-submit="submit()" ng-controller="loginCtrl">
+        <md-input-container class="input">
+            <label>Username</label>
+            <input type="text" ng-model="formData.username" required md-maxlength="100">
+
+            <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="input">
+            <label>Password</label>
+            <input type="text" ng-model="formData.password" required md-maxlength="100">
+
+            <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+            </div>
+        </md-input-container>
+        <button type="submit" class="button buttonBlue">Login
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+    </form>
+</div>
