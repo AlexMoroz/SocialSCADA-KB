@@ -3,3 +3,4 @@
 /mongo
 /public/bower_components
 .idea
+*.iml

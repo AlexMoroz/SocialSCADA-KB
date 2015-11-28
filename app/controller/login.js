@@ -68,7 +68,7 @@ exports.login = {
 exports.logout = {
     handler: function (request, reply) {
         request.auth.session.clear();
-        return reply({ message: "logout"});
+        return reply({ message: "Successfully logged out."});
     },
     auth: 'session'
 };
