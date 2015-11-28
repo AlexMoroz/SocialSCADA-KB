@@ -1,0 +1,25 @@
+<link href="/public/css/nav.css" rel="stylesheet">
+<div ng-controller="navCtrl" layout="column" ng-cloak>
+    <md-toolbar id="navbar">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <md-button aria-label="Events">
+                Events
+            </md-button>
+            <md-button aria-label="User">
+                User
+            </md-button>
+            <md-button aria-label="Admin">
+                Admin
+            </md-button>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <md-content flex layout-padding class="md-whiteframe-z1" id="content">
+        <div data-ui-view></div>
+    </md-content>
+</div>
+
+
+
+

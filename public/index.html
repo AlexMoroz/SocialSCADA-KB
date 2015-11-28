@@ -1,14 +1,14 @@
 <!doctype html>
 <html ng-app="socialscadakb">
 <head>
-<title>Title</title>
-    <link href="/public/css/index.css" rel="stylesheet">
+<title>Knowledgebase</title>
     <link href="/public/bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <link href="/public/css/index.css" rel="stylesheet">
+    <link href="/public/css/login.css" rel="stylesheet" >
 
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="/public/bower_components/angular/angular.js"></script>
-    <script src="/public/bower_components/angular-route/angular-route.js"></script>
-    <script src="/public/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/public/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/public/bower_components/angular-material/angular-material.js"></script>
     <script src="/public/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/public/bower_components/angular-aria/angular-aria.js"></script>
@@ -21,8 +21,10 @@
     <link rel="stylesheet"  href="/public/css/login.css" type="text/css">
     <link rel="stylesheet"  href="/public/css/semantic.min.css" type="text/css">
     <script src="/public/js/semantic.min.js"></script>
+    <script src="/public/controllers/user.js"></script>
+    <script src="/public/controllers/nav.js"></script>
 </head>
 <body>
-<div ng-view></div>
+<div ui-view=""></div>
 </body>
 </html>
