@@ -1,6 +1,9 @@
 <div class="login">
     <link rel="stylesheet" href="/public/css/login.css">
     <form ng-submit="submit()" ng-controller="loginCtrl">
+
+        {{message}}
+
         <md-input-container class="input">
             <label>Username</label>
             <input type="text" ng-model="formData.username" required md-maxlength="100">

@@ -9,6 +9,7 @@ app.controller('loginCtrl', function($scope, $http, $location) {
                 }
                 else {
                     console.log('login failed');
+                    $scope.message = data.message;
                     $location.path('/login')
                 }
             })
