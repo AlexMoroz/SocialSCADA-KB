@@ -1,7 +1,7 @@
 var User = require('./controller/user'),
     Login = require('./controller/login'),
     Static = require('./static'),
-    ToDoListTemplates = require('./controller/toDoListTemplates'),
+    ToDoListTemplate = require('./controller/toDoListTemplate'),
     Sensor = require('./controller/sensor');
 
 exports.endpoints = [
@@ -16,6 +16,7 @@ exports.endpoints = [
     {method: 'POST', path: '/login', config: Login.login},
     {method: 'GET', path: '/logout', config: Login.logout},
     {method: 'GET', path: '/superuser', config: Login.superuser},
-    {method: 'GET', path: '/createToDoListTemplates', config: ToDoListTemplates.createToDoListTemplates},
+    {method: 'GET', path: '/createToDoListTemplate', config: ToDoListTemplate.createToDoListTemplate},
+    {method: 'POST', path: '/createToDoListTemplate', config: ToDoListTemplate.create},
     {method: 'POST', path: '/createSensor', config: Sensor.create}
 ];
