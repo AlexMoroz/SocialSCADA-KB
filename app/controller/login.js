@@ -30,12 +30,14 @@ exports.home = {
 
 exports.login = {
     handler: function (request, reply) {
-        if (request.auth.isAuthenticated) {
-            return reply({ success: true, name: request.auth.credentials.name });
-        }
 
         var message = '';
         var account = null;
+
+        if (request.auth.isAuthenticated) {
+
+            return reply({ success: true, name: request.auth.credentials.name });
+        }
 
         if (request.method === 'post') {
 
