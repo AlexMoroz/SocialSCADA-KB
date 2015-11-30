@@ -55,3 +55,25 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
             $urlRouterProvider.otherwise('/');
         }
     ]);
+
+app.service('MessageService', function() {
+    var displayMessage;
+    this.setMessage = function(message) {
+        displayMessage = message;
+    }
+
+    this.getMessage = function() {
+        return displayMessage;
+    }
+});
+
+app.service('UserService', function() {
+    var activeUser;
+    this.setUser = function(user) {
+        activeUser = user;
+    }
+
+    this.getUser = function() {
+        return activeUser;
+    }
+});

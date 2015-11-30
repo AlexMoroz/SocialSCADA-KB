@@ -1,17 +1,71 @@
 <link href="/public/css/nav.css" rel="stylesheet">
-<div ng-controller="navCtrl" layout="column" ng-cloak>
+<div layout="column" ng-cloak="">
     <md-toolbar id="navbar">
-        <div class="md-toolbar-tools">
+        <div class="md-toolbar-tools" ng-controller="navCtrl as navCtrl">
             <span flex></span>
-            <md-button aria-label="Events">
-                Events
-            </md-button>
-            <md-button aria-label="User">
-                User
-            </md-button>
-            <md-button aria-label="Admin">
-                Admin
-            </md-button>
+            <md-menu>
+                <md-button aria-label="Sensor" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
+                    Sensor
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.showAllSensors()">
+                            show All
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.createSensor()">
+                            create New
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu>
+                <md-button aria-label="ToDoList" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
+                    ToDoList
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.showAllToDoListTemplates()">
+                            show All
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.createToDoListTemplate()">
+                            create New
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu>
+                <md-button aria-label="User" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
+                    User
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.showAllUsers()">
+                            show All
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.createUser()">
+                            create New
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-menu>
+                <md-button aria-label="{{ name }}" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
+                    {{ name }}
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="navCtrl.logout()">
+                            Logout
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
             <span flex></span>
         </div>
     </md-toolbar>
