@@ -1,6 +1,11 @@
 <div ng-controller="createToDoListTemplatesCtrl as ctrl" layout="column" ng-cloak
      class="md-inline-form">
-
+    <div class="ui red message" style="display: none;" id="errorMessage">
+        Error while saving ToDoListTemplate
+    </div>
+    <div class="ui green message" style="display:none" id="successMessage">
+        Success
+    </div>
     <div layout="row" layout-wrap>
         <div flex>
         </div>

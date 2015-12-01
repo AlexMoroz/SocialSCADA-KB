@@ -16,9 +16,13 @@ app.controller('createToDoListTemplatesCtrl', function ($scope, $http, $location
         $http.post('/createToDoListTemplate', $scope.toDoListTemplate)
             .success(function(data) {
                 console.log(data);
+                document.getElementById("errorMessage").style.display = "none";
+                document.getElementById("successMessage").style.display = "block";
                 $scope.toDoListTemplate= new Object();
             })
             .error(function(data) {
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("successMessage").style.display = "none";
                 console.log('Error: ' + data);
             });
     };

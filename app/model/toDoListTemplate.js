@@ -7,9 +7,9 @@ var SchemaTypes = mongoose.Schema.Types,
 
 var ToDoListTemplateSchema = new Schema({
 
-        sensor: {type: String},
-        alarmtype: {type: String},
-        user: {type: String},
+        sensor: {type: String, required: true},
+        alarmtype: {type: String, required: true},
+        user: {type: String, required: true},
         toDoTemplates: [{
             name: {type: String},
             description: {type: String}
