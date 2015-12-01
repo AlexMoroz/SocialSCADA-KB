@@ -14,4 +14,15 @@ exports.create = {
             return reply(Boom.forbidden(err)); // HTTP 403
         });
     }
+};
+
+exports.getAll = {
+    handler: function(request, reply) {
+        Sensor.find(function(err, sensors) {
+            if(err) {
+                return reply({ message: "error" });
+            }
+            return reply({ sensors: sensors });
+        })
+    }
 }

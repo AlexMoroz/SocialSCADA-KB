@@ -1,4 +1,7 @@
-app.controller('loginCtrl', function($scope, $http, $location) {
+app.controller('loginCtrl', function($scope, $http, $location, MessageService) {
+
+    $scope.message = MessageService.getMessage();
+
     $scope.submit = function() {
         $http.post('/login', $scope.formData)
             .success(function(data) {

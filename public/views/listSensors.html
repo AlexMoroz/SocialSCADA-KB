@@ -1,0 +1,13 @@
+<div ng-controller="sensorCtrl">
+
+    All sensors:
+
+    <ul>
+        <li ng-repeat="sensor in sensors">
+            {{sensor.type}} in {{ sensor.place.building }} at {{ sensor.place.street }} {{ sensor.place.number }}
+        </li>
+        <li class="animate-repeat" ng-if="sensors.length == 0">
+            <strong>No results found...</strong>
+        </li>
+    </ul>
+</div>

@@ -61,7 +61,7 @@ exports.login = {
         }
 
         request.auth.session.set(account);
-        return reply({ success: true, name: request.payload.username });
+        return reply({ success: true, name: account.name });
     },
     auth: {mode: 'try', strategy: 'session'},
     plugins: {'hapi-auth-cookie': {redirectTo: false}}
