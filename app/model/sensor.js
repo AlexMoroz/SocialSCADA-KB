@@ -1,21 +1,14 @@
 'use strict';
 
-var mongoose = require('mongoose')
-    require('mongoose-double')(mongoose);
-var SchemaTypes = mongoose.Schema.Types,
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema,
+    PlaceHierarchyEntrySchema = require('./place').PlaceHierarchyEntrySchema;
+
 
 var SensorSchema = new Schema({
 
     type: {type: String, required: true},
-    place: {
-        street: {type: String},
-        number: {type: Number},
-        building: {type: String},
-        room: {type: String},
-        longitude: {type: SchemaTypes.Double},
-        latitude: {type: SchemaTypes.Double}
-    }
+    place: [PlaceHierarchyEntrySchema]
 
 },
     // mongoose adds an s at the end of the collection name

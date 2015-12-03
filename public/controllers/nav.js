@@ -9,12 +9,8 @@ app.controller('navCtrl', function($mdDialog, $location, $scope, $http, MessageS
         $mdOpenMenu(ev);
     };
 
-    this.showAllSensors = function() {
-        $location.path('/allSensors');
-    };
-
-    this.createSensor = function() {
-        $location.path('/createSensor');
+    this.showSensorList = function() {
+        $location.path('/sensorList');
     };
 
     this.showAllUsers = function() {

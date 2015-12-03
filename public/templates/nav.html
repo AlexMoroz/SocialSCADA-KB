@@ -3,24 +3,10 @@
     <md-toolbar id="navbar">
         <div class="md-toolbar-tools" ng-controller="navCtrl as navCtrl">
             <span flex></span>
-            <md-menu>
-                <md-button aria-label="Sensor" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
-                    Sensor
-                </md-button>
-                <md-menu-content width="4">
-                    <md-menu-item>
-                        <md-button ng-click="navCtrl.showAllSensors()">
-                            show All
-                        </md-button>
-                    </md-menu-item>
-                    <md-menu-item>
-                        <md-button ng-click="navCtrl.createSensor()">
-                            create New
-                        </md-button>
-                    </md-menu-item>
-                </md-menu-content>
-            </md-menu>
-            <md-menu>
+            <md-button aria-label="Sensor" ng-click="navCtrl.showSensorList()">
+                Sensor
+            </md-button>
+            <md-menu md-offset="0 45">
                 <md-button aria-label="ToDoList" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
                     ToDoList
                 </md-button>
@@ -37,7 +23,7 @@
                     </md-menu-item>
                 </md-menu-content>
             </md-menu>
-            <md-menu>
+            <md-menu md-offset="0 45">
                 <md-button aria-label="User" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
                     User
                 </md-button>
@@ -54,7 +40,7 @@
                     </md-menu-item>
                 </md-menu-content>
             </md-menu>
-            <md-menu>
+            <md-menu md-offset="0 45">
                 <md-button aria-label="{{ name }}" ng-click="navCtrl.openMenu($mdOpenMenu, $event)">
                     {{ name }}
                 </md-button>

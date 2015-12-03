@@ -1,0 +1,18 @@
+.sensorList md-grid-tile {
+    border: 1px solid #000000;
+}
+
+.sensorList md-grid-tile-footer {
+    padding: 10px;
+}
+
+.sensorList md-list {
+    width: 100%;
+}
+
+.breadcrumbs::before {
+    content: ' >> ';
+}
+.breadcrumbs:first-child::before {
+    content: '';
+}
