@@ -1,0 +1,28 @@
+'use strict';
+
+var mongoose = require('mongoose')
+require('mongoose-double')(mongoose);
+var SchemaTypes = mongoose.Schema.Types,
+    Schema = mongoose.Schema;
+
+var ToDoListSchema = new Schema({
+
+        alarmtype: {type: String, required: true},
+        tags: [{
+            value: {type: String}
+        }],
+        toDo: [{
+            name: {type: String},
+            description: {type: String}
+        }]
+
+    },
+    // mongoose adds an s at the end of the collection name
+    // to force it using another collection specify here
+    { collection: 'todolist'} );
+
+var toDoList = mongoose.model('toDoList', ToDoListSchema);
+
+module.exports = {
+    ToDoList: toDoList
+};

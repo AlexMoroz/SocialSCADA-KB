@@ -9,8 +9,8 @@ app.controller('navCtrl', function($mdDialog, $location, $scope, $http, MessageS
         $mdOpenMenu(ev);
     };
 
-    this.showSensorList = function() {
-        $location.path('/sensorList');
+    this.showSearch = function() {
+        $location.path('/search');
     };
 
     this.showAllUsers = function() {
