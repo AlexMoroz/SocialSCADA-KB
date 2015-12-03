@@ -23,9 +23,19 @@ db.user.insert({firstname:"Eve",lastname:"God",password:"9f735e0df9a1ddc702bf0a1
 
 // ToDoList with ToDo List
 print('insert ToDoList data');
-db.todolist.insert({_id:1,event_id:1,user_id:2,todos:[
-	{_id:1,name:"Call fire brigade",description:"Call 112 and tell them building xyz in street abc is burning",done:true},
-	{_id:2,name:"Run",description:"run away and never look back",done:true}]});
-db.todolist.insert({_id:2,event_id:2,user_id:3,todos:[
-	{_id:1,name:"Check pressure valve",description:"Turn the valve until green arrow appears",done:true},
-	{_id:2,name:"Pull lever",description:"Pull right lever",done:false}]});
+db.todolist.insert({
+	tags:[{value:"Joe Doe"},
+		{value:"fire"},
+		{value:"room 1"}
+	],
+	todos:[{name:"Call fire brigade",description:"Call 112 and tell them building xyz in street abc is burning"},
+		{name:"Run",description:"run away and never look back"}]
+});
+db.todolist.insert({
+	tags:[{value:"Adam God"},
+		{value:"high pressure"},
+		{value:"room 2"}
+	],
+	todos:[{name:"Check pressure valve",description:"Turn the valve until green arrow appears"},
+		{name:"Pull lever",description:"Pull right lever"}]
+});

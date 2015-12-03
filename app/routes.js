@@ -22,6 +22,6 @@ exports.endpoints = [
     {method: 'GET', path: '/user/get/{id}', config: User.getOne},
     {method: 'GET', path: '/toDoList/getAll', config: ToDoList.getAll},
     {method: 'GET', path: '/toDoList/search', config: ToDoList.search},
-    {method: 'POST', path: '/toDoList/create', config: ToDoList.create},
+    {method: 'POST', path: '/toDoList/create', config: ToDoList.create}
 
 ];

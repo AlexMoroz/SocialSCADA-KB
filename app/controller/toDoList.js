@@ -5,12 +5,26 @@ var Boom = require('boom'),
     mongoose = require('mongoose');
 
 exports.create = {
-
-}
+    handler: function (request, reply) {
+        ToDoList.find(function (err, data) {
+            if (!err) {
+                return reply(data);
+            }
+            return reply(Boom.badImplementation(err)); // 500 error
+        });
+    }
+};
 
 exports.search = {
-
-}
+    handler: function (request, reply) {
+        ToDoList.find(function (err, data) {
+            if (!err) {
+                return reply(data);
+            }
+            return reply(Boom.badImplementation(err)); // 500 error
+        });
+    }
+};
 
 exports.getAll = {
     handler: function (request, reply) {
@@ -21,4 +35,4 @@ exports.getAll = {
             return reply(Boom.badImplementation(err)); // 500 error
         });
     }
-}
+};

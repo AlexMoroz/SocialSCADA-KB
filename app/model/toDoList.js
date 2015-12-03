@@ -7,11 +7,10 @@ var SchemaTypes = mongoose.Schema.Types,
 
 var ToDoListSchema = new Schema({
 
-        alarmtype: {type: String, required: true},
         tags: [{
             value: {type: String}
         }],
-        toDo: [{
+        todos: [{
             name: {type: String},
             description: {type: String}
         }]
