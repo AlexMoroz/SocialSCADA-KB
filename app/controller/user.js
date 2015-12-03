@@ -2,7 +2,7 @@
 
 //TODO: add rbac
 
-var Joi = require('joi'),
+var Joi = require('joi'),//why do we need it?
     Boom = require('boom'),
     User = require('../model/user').User,
     mongoose = require('mongoose');
@@ -10,7 +10,7 @@ var Joi = require('joi'),
 
 exports.getAll = {
     handler: function (request, reply) {
-        User.find({}, function (err, user) {
+        User.find(function (err, user) {
             if (!err) {
                 return reply(user);
             }
@@ -21,7 +21,7 @@ exports.getAll = {
 
 exports.getOne = {
     handler: function (request, reply) {
-        User.findOne({'userId': request.params.userId}, function (err, user) {
+        User.find({"_id": "1"}, function (err, user) {
             if (!err) {
                 return reply(user);
             }
@@ -31,22 +31,27 @@ exports.getOne = {
 };
 
 exports.create = {
-    validate: {
-        payload: {
-            userId: Joi.string().required(),
-            username: Joi.string().required()
-        }
-    },
     handler: function (request, reply) {
-        var user = new User(request.payload);
-        user.save(function (err, user) {
-            if (!err) {
-                return reply(user).created('/user/' + user._id); // HTTP 201
-            }
-            if (11000 === err.code || 11001 === err.code) {
-                return reply(Boom.forbidden("please provide another user id, it already exist"));
-            }
-            return reply(Boom.forbidden(err)); // HTTP 403
+        var user = new User();
+        user.firstname = request.payload.firstname;
+        user.lastname = request.payload.lastname;
+        user.email = request.payload.email;
+        user.admin = false;
+        //TODO: send password by email
+
+        //TODO: use autoincrement
+        User.count(function(err, num) {
+            //start with 1
+            user._id = num+1;
+            user.save(function (err, user) {
+                if (!err) {
+                    return reply(user); // HTTP 201
+                }
+                if (11000 === err.code || 11001 === err.code) {
+                    return reply(Boom.forbidden("please provide another user id, it already exist"));
+                }
+                return reply(Boom.forbidden(err)); // HTTP 403
+            });
         });
     }
 };

@@ -6,22 +6,18 @@
 
         <md-input-container class="input">
             <label>Username</label>
-            <input type="text" ng-model="formData.username" required md-maxlength="100">
+            <input type="text" ng-model="formData.username" required>
 
             <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
                 <div ng-message="required">This is required!</div>
-                <div ng-message="md-maxlength">That's too long!</div>
-                <div ng-message="minlength">That's too short!</div>
             </div>
         </md-input-container>
         <md-input-container class="input">
             <label>Password</label>
-            <input type="text" ng-model="formData.password" required md-maxlength="100">
+            <input type="text" ng-model="formData.password" required>
 
             <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
                 <div ng-message="required">This is required!</div>
-                <div ng-message="md-maxlength">That's too long!</div>
-                <div ng-message="minlength">That's too short!</div>
             </div>
         </md-input-container>
         <button type="submit" class="button buttonBlue">Login

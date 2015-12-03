@@ -1,12 +1,48 @@
-<div>
-    <md-menu>
-        <!-- Trigger element is a md-button with an icon -->
-        <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
-            <md-icon md-svg-icon="call:phone"></md-icon>
-        </md-button>
-        <md-menu-content>
-            <md-menu-item><md-button ng-click="doSomething()">Do Something</md-button></md-menu-item>
-        </md-menu-content>
-    </md-menu>
+<link rel="stylesheet" href="/public/css/createUser.css">
+<div layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage">
+
+    <md-content layout-padding="">
+        <form name="userForm">
+
+            <div layout="" layout-sm="column">
+                <md-input-container flex="">
+                    <label>First name</label>
+                    <input ng-model="user.firstname">
+                </md-input-container>
+                <md-input-container flex="">
+                    <label>Last Name</label>
+                    <input ng-model="user.lastname">
+                </md-input-container>
+            </div>
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email" type="email">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Address</label>
+                <input ng-model="user.address">
+            </md-input-container>
+
+            <md-input-container md-no-float="" class="md-block">
+                <input ng-model="user.address2" placeholder="Address 2">
+            </md-input-container>
+
+            <div layout="" layout-sm="column">
+                <md-input-container flex="">
+                    <label>City</label>
+                    <input ng-model="user.city">
+                </md-input-container>
+
+                <md-input-container flex="">
+                    <label>Postal Code</label>
+                    <input name="postalCode" ng-model="user.postalCode" placeholder="12345" md-maxlength="5">
+                </md-input-container>
+            </div>
+            <div layout="row" layout-align="end">
+                <md-button class="md-raised md-primary" ng-click="create()">Create</md-button>
+            </div>
+        </form>
+    </md-content>
 
 </div>

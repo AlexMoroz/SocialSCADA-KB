@@ -10,39 +10,43 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
                     templateUrl: '/public/templates/nav.html',
                     abstract: true,
                 })
-                .state('home', {
+                .state('nav.home', {
                     url: '/home',
-                    parent: 'nav',
                     templateUrl: '/public/views/home.html',
                     controller: 'homeCtrl'
                 })
-                .state('createSensor', {
+                .state('nav.createSensor', {
                     url: '/createSensor',
-                    parent: 'nav',
                     templateUrl: '/public/views/createSensor.html',
                     controller: 'sensorCtrl'
                 })
-                .state('allSensors', {
+                .state('nav.allSensors', {
                     url: '/allSensors',
-                    parent: 'nav',
                     templateUrl: '/public/views/listSensors.html',
                     controller: 'sensorCtrl'
                 })
-                .state('createUser', {
-                    url: '/createUser',
-                    parent: 'nav',
+                .state('nav.createUser', {
+                    url: '/user/create',
                     templateUrl: '/public/views/createUser.html',
                     controller: 'userCtrl'
                 })
-                .state('createToDoListTemplates', {
+                .state('nav.userProfile', {
+                    url: '/user/view',
+                    templateUrl: '/public/views/viewUser.html',
+                    controller: 'viewUserCtrl'
+                })
+                //.state('nav.createUser', {  //TODO: user update
+                //    url: '/user/create/:id',
+                //    templateUrl: '/public/views/createUser.html',
+                //    controller: 'updateUserCtrl'
+                //})
+                .state('nav.createToDoListTemplates', {
                     url: '/createToDoListTemplates',
-                    parent: 'nav',
                     templateUrl: '/public/views/createToDoListTemplates.html',
                     controller: 'createToDoListTemplatesCtrl'
                 })
-                .state('manageToDoListTemplates', {
+                .state('nav.manageToDoListTemplates', {
                     url: '/manageToDoListTemplates',
-                    parent: 'nav',
                     templateUrl: '/public/views/manageToDoListTemplates.html',
                     controller: 'manageToDoListTemplatesCtrl'
                 })

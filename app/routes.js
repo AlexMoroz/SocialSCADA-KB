@@ -19,5 +19,9 @@ exports.endpoints = [
     {method: 'GET', path: '/createToDoListTemplate', config: ToDoListTemplate.createToDoListTemplate},
     {method: 'POST', path: '/createToDoListTemplate', config: ToDoListTemplate.create},
     {method: 'POST', path: '/createSensor', config: Sensor.create},
-    {method: 'GET', path: '/allSensors', config: Sensor.getAll}
+    {method: 'GET', path: '/allSensors', config: Sensor.getAll},
+    {method: 'POST', path: '/user/create', config: User.create},
+    {method: 'GET', path: '/user/getOne', config: User.getOne},
+    {method: 'GET', path: '/user/getAll', config: User.getAll}
+
 ];
