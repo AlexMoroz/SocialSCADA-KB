@@ -20,8 +20,8 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
                     templateUrl: '/public/views/createSensor.html',
                     controller: 'sensorCtrl'
                 })
-                .state('nav.allSensors', {
-                    url: '/allSensors',
+                .state('nav.sensorList', {
+                    url: '/sensorList',
                     templateUrl: '/public/views/listSensors.html',
                     controller: 'sensorCtrl'
                 })

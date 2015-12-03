@@ -2,7 +2,8 @@ var User = require('./controller/user'),
     Login = require('./controller/login'),
     Static = require('./static'),
     ToDoListTemplate = require('./controller/toDoListTemplate'),
-    Sensor = require('./controller/sensor');
+    Sensor = require('./controller/sensor'),
+    Place = require('./controller/place');
 
 exports.endpoints = [
 
@@ -22,6 +23,7 @@ exports.endpoints = [
     {method: 'GET', path: '/allSensors', config: Sensor.getAll},
     {method: 'POST', path: '/user/create', config: User.create},
     {method: 'GET', path: '/user/getOne', config: User.getOne},
-    {method: 'GET', path: '/user/getAll', config: User.getAll}
-
+    {method: 'GET', path: '/user/getAll', config: User.getAll},
+    {method: 'POST', path: '/createPlace', config: Place.create},
+    {method: 'GET', path: '/allPlaces', config: Place.getAll}
 ];
