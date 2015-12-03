@@ -1,6 +1,7 @@
 var User = require('./controller/user'),
     Login = require('./controller/login'),
     Static = require('./static'),
+    ToDoList = require('./controller/toDoList'),
     ToDoListTemplate = require('./controller/toDoListTemplate');
 
 exports.endpoints = [
@@ -19,5 +20,8 @@ exports.endpoints = [
     {method: 'POST', path: '/createToDoListTemplate', config: ToDoListTemplate.create},
     {method: 'POST', path: '/user/create', config: User.create},
     {method: 'GET', path: '/user/get/{id}', config: User.getOne},
-    {method: 'GET', path: '/user/getAll', config: User.getAll},
+    {method: 'GET', path: '/toDoList/getAll', config: ToDoList.getAll},
+    {method: 'GET', path: '/toDoList/search', config: ToDoList.search},
+    {method: 'POST', path: '/toDoList/create', config: ToDoList.create},
+
 ];

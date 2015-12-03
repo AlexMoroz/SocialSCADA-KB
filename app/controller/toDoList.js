@@ -22,7 +22,3 @@ exports.getAll = {
         });
     }
 }
-
-exports.delete = {
-    
-}
