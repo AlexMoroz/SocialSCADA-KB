@@ -21,7 +21,7 @@ exports.getAll = {
 
 exports.getOne = {
     handler: function (request, reply) {
-        User.find({"_id": "1"}, function (err, user) {
+        User.find({"_id": request.params.id}, function (err, user) {
             if (!err) {
                 return reply(user);
             }
@@ -40,9 +40,9 @@ exports.create = {
         //TODO: send password by email
 
         //TODO: use autoincrement
-        User.count(function(err, num) {
-            //start with 1
-            user._id = num+1;
+        //User.count(function(err, num) {
+        //    start with 1
+            //user._id = num+1;
             user.save(function (err, user) {
                 if (!err) {
                     return reply(user); // HTTP 201
@@ -52,7 +52,7 @@ exports.create = {
                 }
                 return reply(Boom.forbidden(err)); // HTTP 403
             });
-        });
+        //});
     }
 };
 

@@ -31,7 +31,7 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
                     controller: 'userCtrl'
                 })
                 .state('nav.userProfile', {
-                    url: '/user/view',
+                    url: '/user/view/:id',
                     templateUrl: '/public/views/viewUser.html',
                     controller: 'viewUserCtrl'
                 })

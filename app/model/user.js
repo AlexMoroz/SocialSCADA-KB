@@ -9,12 +9,12 @@ var SchemaTypes = mongoose.Schema.Types,
 
 var UserSchema = new Schema({
 
-        _id: {type: String, unique: true, required: true},
-        firstname: {type: String},
-        lastname: {type: String},
-        email: {type: String},
-        password: {type: String},
-        admin: {type: Boolean}
+        _id: {type: SchemaTypes.Number, unique: true, required: true},
+        firstname: {type: SchemaTypes.String},
+        lastname: {type: SchemaTypes.String},
+        email: {type: SchemaTypes.String},
+        password: {type: SchemaTypes.String},
+        admin: {type: SchemaTypes.Boolean}
 
     },
 // mongoose adds an s at the end of the collection name
