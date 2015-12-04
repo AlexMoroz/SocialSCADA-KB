@@ -1,0 +1,19 @@
+<div ng-controller="searchCtrl">
+    <md-list ng-cloak="">
+        <md-list-item ng-repeat="toDoList in result">
+            [{{$index + 1}}]:
+            Tags
+            <ul>
+                <li ng-repeat="tag in toDoList.tags">
+                    {{ tag.value }}
+                </li>
+            </ul>
+            ToDos:
+            <ul>
+                <li ng-repeat="todo in toDoList.todos">
+                    {{ todo.name }}
+                </li>
+            </ul>
+        </md-list-item>
+    </md-list>
+</div>

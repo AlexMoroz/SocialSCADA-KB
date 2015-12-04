@@ -15,15 +15,10 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
                     templateUrl: '/public/views/home.html',
                     controller: 'homeCtrl'
                 })
-                .state('nav.createSensor', {
-                    url: '/createSensor',
-                    templateUrl: '/public/views/createSensor.html',
-                    controller: 'sensorCtrl'
-                })
-                .state('nav.sensorList', {
-                    url: '/sensorList',
-                    templateUrl: '/public/views/listSensors.html',
-                    controller: 'sensorCtrl'
+                .state('nav.search', {
+                    url: '/search',
+                    templateUrl: '/public/views/search.html',
+                    controller: 'searchCtrl'
                 })
                 .state('nav.createUser', {
                     url: '/user/create',
