@@ -3,12 +3,12 @@
 /* defining the app */
 var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
     .config(['$httpProvider', '$stateProvider', '$urlRouterProvider',
-        function($httpProvider, $stateProvider, $urlRouterProvider) {
+        function ($httpProvider, $stateProvider, $urlRouterProvider) {
 
             $stateProvider
                 .state('nav', {
                     templateUrl: '/public/templates/nav.html',
-                    abstract: true,
+                    abstract: true
                 })
                 .state('nav.home', {
                     url: '/home',
@@ -60,24 +60,4 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
         }
     ]);
 
-app.service('MessageService', function() {
-    var displayMessage;
-    this.setMessage = function(message) {
-        displayMessage = message;
-    }
 
-    this.getMessage = function() {
-        return displayMessage;
-    }
-});
-
-app.service('UserService', function() {
-    var activeUser;
-    this.setUser = function(user) {
-        activeUser = user;
-    }
-
-    this.getUser = function() {
-        return activeUser;
-    }
-});

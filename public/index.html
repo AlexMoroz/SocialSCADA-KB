@@ -2,25 +2,45 @@
 <html ng-app="socialscadakb">
 <head>
 <title>Knowledgebase</title>
-    <link href="/public/bower_components/angular-material/angular-material.css" rel="stylesheet">
-    <link href="/public/css/index.css" rel="stylesheet">
-    <link href="/public/css/login.css" rel="stylesheet" >
 
+    <!-- css files-->
+    <link href="/public/css/index.css" rel="stylesheet">
+    <!-- -->
+
+    <!-- bower components css-->
+    <link href="/public/bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <link href="/public/bower_components/semantic/dist/semantic.min.css" rel="stylesheet">
+    <!-- -->
+
+    <!-- bower components -->
     <script src="/public/bower_components/angular/angular.js"></script>
     <script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/public/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/public/bower_components/angular-material/angular-material.js"></script>
     <script src="/public/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/public/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/public/bower_components/semantic/dist/semantic.min.js"></script>
+    <!-- -->
+
+    <!-- js files  -->
     <script src="/public/core.js"></script>
+    <!-- -->
+
+    <!-- controllers -->
     <script src="/public/controllers/createToDoListTemplatesCtrl.js"></script>
     <script src="/public/controllers/manageToDoListTemplatesCtrl.js"></script>
     <script src="/public/controllers/login.js"></script>
     <script src="/public/controllers/home.js"></script>
     <script src="/public/controllers/sensor.js"></script>
-    <script src="/public/js/semantic.min.js"></script>
     <script src="/public/controllers/user.js"></script>
     <script src="/public/controllers/nav.js"></script>
+    <!-- -->
+
+    <!-- services -->
+    <script src="/public/services/user.js"></script>
+    <script src="/public/services/message.js"></script>
+    <!-- -->
+
 </head>
 <body>
 <div ui-view=""></div>
