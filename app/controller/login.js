@@ -1,6 +1,6 @@
 'use strict';
 
-var Joi = require('joi'),
+var Bcrypt = require('bcrypt'),
     Boom = require('boom'),
     User = require('../model/user').User,
     mongoose = require('mongoose');

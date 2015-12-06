@@ -1,10 +1,12 @@
 app.controller('userCtrl', function ($scope, $http) {
     $scope.user = {
-        username: '',
+        email: '',
+        password: '' + (Math.random() * 10000000000),
         firstname: '',
         lastname: '',
         company: '',
         address: '',
+        admin: false,
         city: '',
         postalCode: ''
     };

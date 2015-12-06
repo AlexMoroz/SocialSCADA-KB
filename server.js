@@ -25,20 +25,6 @@ child = exec('./mongo/startMongo.sh',
         }
     });
 
-var users = {
-    johnny: {
-        username: 'john',
-        password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm',   // 'secret'
-        name: 'John Doe',
-        id: '2133d32a'
-    },
-    john: {
-        id: 'john',
-        password: 'password',
-        name: 'John Doe'
-    }
-};
-
 var validate = function (request, username, password, callback) {
     var user = users[username];
     if (!user) {
