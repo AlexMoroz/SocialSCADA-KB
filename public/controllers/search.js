@@ -1,7 +1,7 @@
 app.controller('searchCtrl', function($scope, $http) {
 
     $scope.result = [];
-    $scope.tags = '';
+    $scope.tags = [];
 
     // get all sensors
     $http.get('/toDoList/getAll')
@@ -13,9 +13,16 @@ app.controller('searchCtrl', function($scope, $http) {
         });
 
     $scope.search = function() {
-        $http.get('/toDoList/search/' + $scope.tags)
+        var tag;
+        var tagArray = [];
+        var tagArrayItem = {};
+        for(tag of $scope.tags) {
+            tagArrayItem.value = tag;
+            tagArray.push(tagArrayItem);
+        }
+        $http.post('/toDoList/search', tagArray)
             .success(function(data) {
-                $scope.tags = '';
+                $scope.tags = [];
                 $scope.result = data;
             })
             .error(function(data) {
