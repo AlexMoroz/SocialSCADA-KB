@@ -17,12 +17,33 @@ exports.create = {
 
 exports.search = {
     handler: function (request, reply) {
-        ToDoList.find(function (err, data) {
-            if (!err) {
-                return reply(data);
+
+        // if no tags in search request return all stored ToDoLists
+        if(request.params.tags == '') {
+            ToDoList.find(function (err, data) {
+                if (!err) {
+                    return reply(data);
+                }
+                return reply(Boom.badImplementation(err)); // 500 error
+            });
+        }
+        else {
+            var textArray = request.params.tags.split(' ');
+            var tagArray = [];
+            var text = ''
+            for (text of textArray) {
+                var tag = {};
+                tag.value = text;
+                tagArray.push(tag);
             }
-            return reply(Boom.badImplementation(err)); // 500 error
-        });
+            ToDoList.find({ tags: { "$in" : tagArray} },function (err, data) {
+                if (!err) {
+                    return reply(data);
+                }
+                return reply(Boom.badImplementation(err)); // 500 error
+            });
+        }
+
     }
 };
 
