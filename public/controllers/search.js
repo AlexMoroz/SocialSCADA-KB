@@ -13,21 +13,33 @@ app.controller('searchCtrl', function($scope, $http) {
         });
 
     $scope.search = function() {
-        var tag;
-        var tagArray = [];
-        var tagArrayItem = {};
-        for(tag of $scope.tags) {
-            tagArrayItem.value = tag;
-            tagArray.push(tagArrayItem);
+        if($scope.tags.length == 0) {
+            // get all sensors
+            $http.get('/toDoList/getAll')
+                .success(function(data) {
+                    $scope.result = data;
+                })
+                .error(function(data) {
+                    console.log('Error: ' + data);
+                });
         }
-        $http.post('/toDoList/search', tagArray)
-            .success(function(data) {
-                $scope.tags = [];
-                $scope.result = data;
-            })
-            .error(function(data) {
-                console.log(data);
-            });
+        else {
+            var tag;
+            var tagArray = [];
+            var tagArrayItem = {};
+            for (tag of $scope.tags) {
+                tagArrayItem.value = tag;
+                tagArray.push(tagArrayItem);
+            }
+            $http.post('/toDoList/search', tagArray)
+                .success(function (data) {
+                    $scope.tags = [];
+                    $scope.result = data;
+                })
+                .error(function (data) {
+                    console.log(data);
+                });
+        }
     }
 
 });
