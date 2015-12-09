@@ -7,8 +7,9 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
 
             $stateProvider
                 .state('nav', {
-                    templateUrl: '/public/templates/nav.html',
-                    abstract: true
+                    templateUrl: '/public/views/nav.html',
+                    abstract: true,
+                    controller: 'navCtrl'
                 })
                 .state('nav.home', {
                     url: '/home',

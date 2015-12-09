@@ -1,11 +1,14 @@
 
-app.service('UserService', function() {
-    var activeUser;
-    this.setUser = function(user) {
-        activeUser = user;
-    }
-
-    this.getUser = function() {
-        return activeUser;
+app.service('UserService', function($http) {
+    return function(callback) {
+        $http({
+            method: 'GET',
+            url: '/user/getActiveUser',
+            withCredentials: true
+        }).then(function success(response) {
+            return callback(response.data);
+        }, function error(response) {
+            console.log("Error: ", response.statusText);
+        });
     }
 });

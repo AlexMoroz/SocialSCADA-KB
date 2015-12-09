@@ -48,6 +48,17 @@ exports.create = {
     }
 };
 
+exports.getActiveUser = {
+    handler: function (request, reply) {
+        console.log(request.auth);
+        if (request.auth.isAuthenticated) {
+            reply(request.auth.artifacts);
+        } else
+            reply(Boom.badRequest("Not authorized access."));
+    },
+    auth: 'session'
+};
+
 exports.update = {
     handler: function (request, reply) {
         User.findOne({'userId': request.params.userId}, function (err, user) {

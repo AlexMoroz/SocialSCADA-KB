@@ -17,10 +17,7 @@ exports.login = {
 
         var message = '';
         if (request.auth.isAuthenticated) {
-            return reply({
-                name: request.auth.artifacts.firstname + ' ' + request.auth.artifacts.lastname,
-                email: request.auth.artifacts.email
-            });
+            return reply(request.auth.artifacts);
         }
 
         if (request.method === 'post') {
@@ -42,7 +39,8 @@ exports.login = {
                             if(isValid) {
                                 var result = {
                                     name: user.firstname + ' ' + user.lastname,
-                                    email: user.email
+                                    email: user.email,
+                                    admin: user.admin
                                 };
                                 request.auth.session.set(result);
                                 return reply(result);
@@ -70,25 +68,3 @@ exports.logout = {
     },
     auth: 'session'
 };
-
-exports.superuser = {
-    handler: function (request, reply) {
-        reply('hello, ' + request.auth.credentials.name);
-    },
-    auth: 'simple',
-    plugins: {
-        rbac: {
-            target: ['any-of', {type: 'group', value: 'readers'}],
-            apply: 'deny-overrides', // Combinatory algorithm
-            rules: [
-                {
-                    target: ['any-of', {type: 'username', value: 'bad_guy'}],
-                    effect: 'deny'
-                },
-                {
-                    effect: 'permit'
-                }
-            ]
-        }
-    }
-}

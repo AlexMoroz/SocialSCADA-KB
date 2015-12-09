@@ -1,4 +1,5 @@
-app.controller('homeCtrl', function($scope) {
-    console.log(name);
-    $scope.name = name;
+app.controller('homeCtrl', function($scope, UserService) {
+    UserService(function(user) {
+        $scope.user = user;
+    })
 });

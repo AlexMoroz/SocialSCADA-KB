@@ -1,9 +1,8 @@
-app.controller('loginCtrl', function($scope, $http, $state, notification) {
+app.controller('loginCtrl', function($scope, $http, $state, notification, UserService) {
 
     $scope.submit = function() {
         $http.post('/login', $scope.formData)
             .success(function(data) {
-                name = data.name;
                 $state.go('nav.home');
             })
             .error(function(data) {

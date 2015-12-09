@@ -25,17 +25,6 @@ child = exec('./mongo/startMongo.sh',
         }
     });
 
-var validate = function (request, username, password, callback) {
-    var user = users[username];
-    if (!user) {
-        return callback(null, false);
-    }
-
-    Bcrypt.compare(password, user.password, function (err, isValid) {
-        callback(err, isValid, {id: user.id, name: user.name});
-    });
-};
-
 
 server.register([
     {
@@ -53,14 +42,7 @@ server.register([
     },
     {
         register: require('inert')
-    },
-    {
-        //basic authentication
-        register: require('hapi-auth-basic')
-    }, {
-        //role based access control
-        register: require('hapi-rbac')
-    }, {
+    },{
         //session cookie management
         register: require('hapi-auth-cookie')
     }], function (err) {
@@ -74,8 +56,6 @@ server.register([
         redirectTo: '/login',
         isSecure: false
     });
-
-    server.auth.strategy('simple', 'basic', {validateFunc: validate});
 
 
     server.start(function () {

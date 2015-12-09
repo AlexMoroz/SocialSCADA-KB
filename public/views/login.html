@@ -1,6 +1,5 @@
 <link href="/public/css/login.css" rel="stylesheet" >
 <div class="login">
-    <link rel="stylesheet" href="/public/css/login.css">
     <form ng-submit="submit()" ng-controller="loginCtrl">
         <md-input-container class="input">
             <label>Email</label>
@@ -12,7 +11,7 @@
         </md-input-container>
         <md-input-container class="input">
             <label>Password</label>
-            <input type="text" ng-model="formData.password" required>
+            <input type="password" ng-model="formData.password" required>
 
             <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
                 <div ng-message="required">This is required!</div>
