@@ -36,15 +36,10 @@ var app = angular.module('socialscadakb', ['ui.router', 'ngMaterial'])
                 //    templateUrl: '/public/views/createUser.html',
                 //    controller: 'updateUserCtrl'
                 //})
-                .state('nav.createToDoListTemplates', {
-                    url: '/createToDoListTemplates',
-                    templateUrl: '/public/views/createToDoListTemplates.html',
-                    controller: 'createToDoListTemplatesCtrl'
-                })
-                .state('nav.manageToDoListTemplates', {
-                    url: '/manageToDoListTemplates',
-                    templateUrl: '/public/views/manageToDoListTemplates.html',
-                    controller: 'manageToDoListTemplatesCtrl'
+                .state('nav.createToDoList', {
+                    url: '/createToDoList',
+                    templateUrl: '/public/views/createToDoList.html',
+                    controller: 'createToDoListCtrl'
                 })
                 .state('login', {
                     url: '/',

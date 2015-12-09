@@ -19,8 +19,12 @@ app.controller('navCtrl', function ($mdDialog, $state, $scope, $http, UserServic
         $state.go("nav.createUser");
     };
 
-    $scope.createToDoListTemplate = function () {
-        $state.go("nav.createToDoListTemplates");
+    $scope.showAllToDoListTemplates = function () {
+        $state.go("nav.home");
+    };
+
+    $scope.createToDoList = function () {
+        $state.go("nav.createToDoList");
     };
 
     $scope.logout = function () {

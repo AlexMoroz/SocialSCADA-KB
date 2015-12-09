@@ -1,7 +1,7 @@
-<div ng-controller="createToDoListTemplatesCtrl as ctrl" layout="column" ng-cloak
+<div ng-controller="createToDoListCtrl as ctrl" layout="column" ng-cloak
      class="md-inline-form">
     <div class="ui red message" style="display: none;" id="errorMessage">
-        Error while saving ToDoListTemplate
+        Error while saving ToDoList
     </div>
     <div class="ui green message" style="display:none" id="successMessage">
         Success
@@ -13,7 +13,7 @@
             <md-content layout-padding layout="column" layout-sm="column">
                 <md-input-container>
                     <label>Sensor</label>
-                    <md-select ng-model="toDoListTemplate.sensor">
+                    <md-select ng-model="sensor">
                         <md-option ng-repeat="sensor in ctrl.sensors" value="{{sensor}}">
                             {{sensor}}
                         </md-option>
@@ -21,7 +21,7 @@
                 </md-input-container>
                 <md-input-container>
                     <label>Alarmtype</label>
-                    <md-select ng-model="toDoListTemplate.alarmtype">
+                    <md-select ng-model="alarmtype">
                         <md-option ng-repeat="alarmtype in ctrl.alarmtypes" value="{{alarmtype}}">
                             {{alarmtype}}
                         </md-option>
@@ -29,7 +29,7 @@
                 </md-input-container>
                 <md-input-container>
                     <label>User</label>
-                    <md-select ng-model="toDoListTemplate.user">
+                    <md-select ng-model="user">
                         <md-option ng-repeat="user in ctrl.users" value="{{user}}">
                             {{user}}
                         </md-option>
@@ -37,7 +37,7 @@
                 </md-input-container>
             </md-content>
             <h4>ToDos</h4>
-            <table class="ui celled table" ng-show="toDoListTemplate.toDoTemplates.length">
+            <table class="ui celled table" ng-show="toDoList.todos.length">
                 <thead>
                 <tr>
                     <th>Name</th>
@@ -45,13 +45,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="toDoTemplate in toDoListTemplate.toDoTemplates track by $index">
-                    <td>{{toDoTemplate.name}}</td>
-                    <td>{{toDoTemplate.description}}</td>
+                <tr ng-repeat="toDo in toDoList.todos track by $index">
+                    <td>{{toDo.name}}</td>
+                    <td>{{toDo.description}}</td>
                 </tr>
                 </tbody>
             </table>
-            <p ng-show="!toDoListTemplate.toDoTemplates.length">
+            <p ng-show="!toDoList.todos.length">
                 No ToDos
             </p>
             <md-button class="md-raised" ng-click="showAdvanced($event)">Add ToDo</md-button>

@@ -4,6 +4,7 @@ var Boom = require('boom'),
     ToDoList = require('../model/toDoList').ToDoList,
     mongoose = require('mongoose');
 
+/*
 exports.create = {
     handler: function (request, reply) {
         ToDoList.find(function (err, data) {
@@ -14,6 +15,7 @@ exports.create = {
         });
     }
 };
+*/
 
 exports.search = {
     handler: function (request, reply) {
@@ -46,6 +48,27 @@ exports.getAll = {
                 return reply(data);
             }
             return reply(Boom.badImplementation(err)); // 500 error
+        });
+    }
+};
+
+exports.createToDoList = {
+    handler: function (request, reply) {
+        return reply();
+    }
+};
+
+exports.create = {
+    handler: function (request, reply) {
+        var toDoList = new ToDoList(request.payload);
+        toDoList.save(function (err, toDoList) {
+            if (!err) {
+                return reply({ message: "toDoList created" });
+            }
+            if (11000 === err.code || 11001 === err.code) {
+                return reply(Boom.forbidden("please provide another toDoList id, it already exist"));
+            }
+            return reply(Boom.forbidden(err)); // HTTP 403
         });
     }
 };
