@@ -1,5 +1,7 @@
-print('Database:')
+print('Database:');
+db = db.getSiblingDB("socialscada");
 printjson(db.getName());
+
 
 // delete non-system collections
 print('Deleting...');
@@ -7,8 +9,9 @@ db.getCollectionNames().forEach(function(c) { if (c.indexOf("system.") == -1) db
 
 // create db and collections
 print('... start creating collections.');
-db.createCollection("user",{autoIndexId:true});
-db.createCollection("todolist",{autoIndexId:true});
+db.createCollection("user", {autoIndexId:true});
+db.createCollection("todolist", {autoIndexId:true});
+db.createCollection("tag", {autoIndexId: true});
 
 print('Collections created:');
 printjson(db.getCollectionNames());
@@ -17,11 +20,11 @@ printjson(db.getCollectionNames());
 
 // User
 print('insert user data');
-db.user.insert({firstname:"Joe",lastname:"Doe",password:"9f735e0df9a1ddc702bf0a1a7b83033f9f7153a00c29de82cedadc9957289b05",admin:true});
-db.user.insert({firstname:"Adam",lastname:"God",password:"9f735e0df9a1ddc702bf0a1a7b83033f9f7153a00c29de82cedadc9957289b05",admin:false});
-db.user.insert({firstname:"Eve",lastname:"God",password:"9f735e0df9a1ddc702bf0a1a7b83033f9f7153a00c29de82cedadc9957289b05",admin:false});
+db.user.insert({email: "joedoe@tum.de", firstname:"Joe",lastname:"Doe",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm", admin:true});
+db.user.insert({email: "adamgod@tum.de", firstname:"Adam",lastname:"God",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm",admin:false});
+db.user.insert({email: "evegod@tum.de", firstname:"Eve",lastname:"God",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm",admin:false});
 
-// ToDoList with ToDo List
+// ToDoList with ToDoList
 print('insert ToDoList data');
 db.todolist.insert({
 	tags:[{value:"Joe Doe"},
@@ -39,3 +42,8 @@ db.todolist.insert({
 	todos:[{name:"Check pressure valve",description:"Turn the valve until green arrow appears"},
 		{name:"Pull lever",description:"Pull right lever"}]
 });
+
+// tags
+print('insert tags data');
+db.tag.insert({name:"scada"});
+db.tag.insert({name:"social"});

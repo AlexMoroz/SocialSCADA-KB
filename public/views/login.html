@@ -2,14 +2,11 @@
 <div class="login">
     <link rel="stylesheet" href="/public/css/login.css">
     <form ng-submit="submit()" ng-controller="loginCtrl">
-
-        {{message}}
-
         <md-input-container class="input">
-            <label>Username</label>
-            <input type="text" ng-model="formData.username" required>
+            <label>Email</label>
+            <input type="email" ng-model="formData.email" required>
 
-            <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+            <div ng-messages="userForm.email.$error" ng-show="userForm.email.$dirty">
                 <div ng-message="required">This is required!</div>
             </div>
         </md-input-container>

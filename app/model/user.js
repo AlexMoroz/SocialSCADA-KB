@@ -17,9 +17,9 @@ var UserSchema = new Schema({
         admin: {type: SchemaTypes.Boolean}
 
     },
-// mongoose adds an s at the end of the collection name
-// to force it using another collection specify here
-    {collection: 'user'});
+    // mongoose adds an s at the end of the collection name
+    // to force it using another collection specify here
+    { collection: 'user'} );
 
 var user = mongoose.model('user', UserSchema);
 

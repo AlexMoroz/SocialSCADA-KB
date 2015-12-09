@@ -1,41 +1,40 @@
-app.controller('navCtrl', function($mdDialog, $location, $scope, $http, MessageService) {
+app.controller('navCtrl', function ($mdDialog, $state, $scope, $http, notification) {
 
     $scope.name = name;
 
     var originatorEv;
 
-    this.openMenu = function($mdOpenMenu, ev) {
+    this.openMenu = function ($mdOpenMenu, ev) {
         originatorEv = ev;
         $mdOpenMenu(ev);
     };
 
-    this.showSearch = function() {
-        $location.path('/search');
+    this.showSearch = function () {
+        $state.go("nav.search");
     };
 
-    this.showAllUsers = function() {
-        $location.path('/');
+    this.showAllUsers = function () {
+        $state.go("nav.home");
     };
 
-    this.createUser = function() {
-        $location.path('/createUser');
+    this.createUser = function () {
+        $state.go("nav.createUser");
     };
 
-    this.showAllToDoListTemplates = function() {
-        $location.path('/');
+    this.showAllToDoListTemplates = function () {
+        $state.go("nav.home");
     };
 
-    this.createToDoListTemplate = function() {
-        $location.path('/createToDoListTemplates');
+    this.createToDoListTemplate = function () {
+        $state.go("nav.createToDoListTemplates");
     };
 
-    this.logout = function() {
+    this.logout = function () {
         $http.get('/logout')
-            .success(function(data) {
-                MessageService.setMessage(data.message);
+            .success(function (data) {
                 $location.path('/login');
             })
-            .error(function(data) {
+            .error(function (data) {
                 console.log('Error: ' + data);
             });
     };

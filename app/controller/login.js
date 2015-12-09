@@ -5,23 +5,9 @@ var Bcrypt = require('bcrypt'),
     User = require('../model/user').User,
     mongoose = require('mongoose');
 
-var users = {
-    johnny: {
-        username: 'john',
-        password: '$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm',   // 'secret'
-        name: 'John Doe',
-        id: '2133d32a'
-    },
-    john: {
-        id: 'john',
-        password: 'password',
-        name: 'John Doe'
-    }
-};
-
 exports.home = {
     handler: function (request, reply) {
-        return reply({ name: request.auth.credentials.name });
+        return reply({name: request.auth.credentials.name});
     },
     auth: 'session'
 };
@@ -30,36 +16,48 @@ exports.login = {
     handler: function (request, reply) {
 
         var message = '';
-        var account = null;
-
         if (request.auth.isAuthenticated) {
-
-            return reply({ success: true, name: request.auth.credentials.name });
+            return reply({
+                name: request.auth.artifacts.firstname + ' ' + request.auth.artifacts.lastname,
+                email: request.auth.artifacts.email
+            });
         }
 
         if (request.method === 'post') {
 
-            if (!request.payload.username || !request.payload.password) {
+            if (!request.payload.email || !request.payload.password) {
 
                 message = 'Missing username or password';
+                reply(Boom.badRequest(message));
             }
             else {
-                account = users[request.payload.username];
-                if (!account ||
-                    account.password !== request.payload.password) {
-
-                    message = 'Invalid username or password';
-                }
+                User.findOne({"email": request.payload.email}, function (err, user) {
+                    if (!err) {
+                        if(user == null) {
+                            message = 'Incorrect login or password.';
+                            reply(Boom.badRequest(message));
+                            return;
+                        }
+                        Bcrypt.compare(request.payload.password, user.password, function (err, isValid) {
+                            if(isValid) {
+                                var result = {
+                                    name: user.firstname + ' ' + user.lastname,
+                                    email: user.email
+                                };
+                                request.auth.session.set(result);
+                                return reply(result);
+                            } else {
+                                message = 'Incorrect login or password.';
+                                reply(Boom.badRequest(message));
+                            }
+                        });
+                    } else
+                        return reply(Boom.badImplementation(err));
+                });
             }
+        } else {
+            return reply(Boom.badRequest("Err: get request."));
         }
-
-        if (request.method === 'get' || message) {
-
-            return reply({ success: false, message: message });
-        }
-
-        request.auth.session.set(account);
-        return reply({ success: true, name: account.name });
     },
     auth: {mode: 'try', strategy: 'session'},
     plugins: {'hapi-auth-cookie': {redirectTo: false}}
@@ -68,7 +66,7 @@ exports.login = {
 exports.logout = {
     handler: function (request, reply) {
         request.auth.session.clear();
-        return reply({ message: "Successfully logged out."});
+        return reply({message: "Successfully logged out."});
     },
     auth: 'session'
 };

@@ -1,10 +1,11 @@
-app.service('MessageService', function() {
-    var displayMessage;
-    this.setMessage = function(message) {
-        displayMessage = message;
-    }
+app.factory('notification', ['$mdDialog', function ($mdDialog) {
+    return function (title, body) {
+        var alert = $mdDialog.alert({
+            title: title,
+            content: body,
+            ok: 'Close'
+        });
 
-    this.getMessage = function() {
-        return displayMessage;
-    }
-});
+        return $mdDialog.show(alert);
+    };
+}]);
