@@ -3,7 +3,7 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
     $scope.toDoList = new Object();
 
     this.alarmtypes = ["Fire", "Hot", "Cold"];
-    this.sensors = ["Building 1, Room 21", "Building 2, Room 12"];
+    this.sensors = ["Sensor 1", "Sensor 2"];
     this.users = ["John", "Max", "Susan"];
 
     $scope.alarmtype = "";
