@@ -25,8 +25,8 @@ app.controller('navCtrl', function ($mdDialog, $state, $scope, $http, notificati
         $state.go("nav.home");
     };
 
-    this.createToDoListTemplate = function () {
-        $state.go("nav.createToDoListTemplates");
+    this.createToDoList = function () {
+        $state.go("nav.createToDoList");
     };
 
     this.logout = function () {
