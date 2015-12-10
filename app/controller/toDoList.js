@@ -17,7 +17,7 @@ exports.search = {
             });
         }
         else {
-            ToDoList.find({ tags: { "$in" : request.payload} },function (err, data) {
+            ToDoList.find({ tags: { "$in": request.payload } },function (err, data) {
                 if (!err) {
                     return reply(data);
                 }
@@ -30,7 +30,7 @@ exports.search = {
 
 exports.searchAPI = {
     handler: function (request, reply) {
-        ToDoList.find({ tags: { "$size" : request.payload.length, "$in" : request.payload} },function (err, data) {
+        ToDoList.find({ tags: { $exists: true, "$in": request.payload }, $where: 'this.tags.length >= ' + request.payload.length },function (err, data) {
             if (!err) {
                 return reply(data);
             }
