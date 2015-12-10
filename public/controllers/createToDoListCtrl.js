@@ -15,24 +15,9 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
 
     $scope.submit = function () {
 
-        if($scope.alarmtype != "") {
-            var alarmtypeObject = new Object();
-            alarmtypeObject.value = $scope.alarmtype;
-
-            $scope.toDoList.tags.push(alarmtypeObject);
-        }
-        if($scope.sensor != "") {
-            var sensorObject = new Object();
-            sensorObject.value = $scope.sensor;
-
-            $scope.toDoList.tags.push(sensorObject);
-        }
-        if($scope.user != "") {
-            var userObject = new Object();
-            userObject.value = $scope.user;
-
-            $scope.toDoList.tags.push(userObject);
-        }
+        $scope.toDoList.tags.push($scope.alarmtype);
+        $scope.toDoList.tags.push($scope.sensor);
+        $scope.toDoList.tags.push($scope.user);
 
         $http.post('/createToDoList', $scope.toDoList)
             .success(function(data) {
