@@ -24,14 +24,7 @@ app.controller('searchCtrl', function($scope, $http) {
                 });
         }
         else {
-            var tag;
-            var tagArray = [];
-            var tagArrayItem = {};
-            for (tag of $scope.tags) {
-                tagArrayItem.value = tag;
-                tagArray.push(tagArrayItem);
-            }
-            $http.post('/toDoList/search', tagArray)
+            $http.post('/toDoList/search', $scope.tags)
                 .success(function (data) {
                     $scope.tags = [];
                     $scope.result = data;

@@ -4,19 +4,6 @@ var Boom = require('boom'),
     ToDoList = require('../model/toDoList').ToDoList,
     mongoose = require('mongoose');
 
-/*
-exports.create = {
-    handler: function (request, reply) {
-        ToDoList.find(function (err, data) {
-            if (!err) {
-                return reply(data);
-            }
-            return reply(Boom.badImplementation(err)); // 500 error
-        });
-    }
-};
-*/
-
 exports.search = {
     handler: function (request, reply) {
 
@@ -30,7 +17,7 @@ exports.search = {
             });
         }
         else {
-            ToDoList.find({ tags: { "$in" : request.payload} },function (err, data) {
+            ToDoList.find({ tags: { "$in": request.payload } },function (err, data) {
                 if (!err) {
                     return reply(data);
                 }
@@ -38,6 +25,17 @@ exports.search = {
             });
         }
 
+    }
+};
+
+exports.searchAPI = {
+    handler: function (request, reply) {
+        ToDoList.find({ tags: { $exists: true, "$in": request.payload }, $where: 'this.tags.length >= ' + request.payload.length },function (err, data) {
+            if (!err) {
+                return reply(data);
+            }
+            return reply(Boom.badImplementation(err)); // 500 error
+        });
     }
 };
 

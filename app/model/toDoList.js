@@ -7,9 +7,7 @@ var SchemaTypes = mongoose.Schema.Types,
 
 var ToDoListSchema = new Schema({
 
-        tags: [{
-            value: {type: String}
-        }],
+        tags: [String],
         todos: [{
             name: {type: String},
             description: {type: String}
