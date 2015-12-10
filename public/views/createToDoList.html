@@ -1,3 +1,4 @@
+
 <div ng-controller="createToDoListCtrl as ctrl" layout="column" ng-cloak
      class="md-inline-form">
     <div class="ui red message" style="display: none;" id="errorMessage">
@@ -10,32 +11,19 @@
         <div flex>
         </div>
         <div flex-lg="80" flex-md="80" flex-sm="80" flex-gt-lg="80">
-            <md-content layout-padding layout="column" layout-sm="column">
-                <md-input-container>
-                    <label>Sensor</label>
-                    <md-select ng-model="sensor">
-                        <md-option ng-repeat="sensor in ctrl.sensors" value="{{sensor}}">
-                            {{sensor}}
-                        </md-option>
-                    </md-select>
+                <md-input-container class="md-block">
+                    <label>TODO list name</label>
+                    <input md-maxlength="30" required name="nameList" ng-model="ctrl.name">
                 </md-input-container>
-                <md-input-container>
-                    <label>Alarmtype</label>
-                    <md-select ng-model="alarmtype">
-                        <md-option ng-repeat="alarmtype in ctrl.alarmtypes" value="{{alarmtype}}">
-                            {{alarmtype}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-                <md-input-container>
-                    <label>User</label>
-                    <md-select ng-model="user">
-                        <md-option ng-repeat="user in ctrl.users" value="{{user}}">
-                            {{user}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </md-content>
+                <h2 class="md-title">Describe content of the TODO using tags</h2>
+            <md-chips
+                    ng-model="tags"
+                    readonly="readonly"
+                    placeholder="Enter a tag"
+                    delete-button-label="Remove Tag"
+                    delete-hint="Press delete to remove tag"
+                    secondary-placeholder="+Tag"></md-chips>
+            <br/>
             <h4>ToDos</h4>
             <table class="ui celled table" ng-show="toDoList.todos.length">
                 <thead>

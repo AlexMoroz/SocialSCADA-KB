@@ -1,4 +1,4 @@
-app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDialog) {
+app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDialog, $timeout, $q) {
 
     $scope.toDoList = new Object();
 
@@ -15,19 +15,19 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
 
     $scope.submit = function () {
 
-        if($scope.alarmtype != "") {
+        if ($scope.alarmtype != "") {
             var alarmtypeObject = new Object();
             alarmtypeObject.value = $scope.alarmtype;
 
             $scope.toDoList.tags.push(alarmtypeObject);
         }
-        if($scope.sensor != "") {
+        if ($scope.sensor != "") {
             var sensorObject = new Object();
             sensorObject.value = $scope.sensor;
 
             $scope.toDoList.tags.push(sensorObject);
         }
-        if($scope.user != "") {
+        if ($scope.user != "") {
             var userObject = new Object();
             userObject.value = $scope.user;
 
@@ -35,11 +35,11 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
         }
 
         $http.post('/createToDoList', $scope.toDoList)
-            .success(function(data) {
+            .success(function (data) {
                 console.log(data);
                 document.getElementById("errorMessage").style.display = "none";
                 document.getElementById("successMessage").style.display = "block";
-                $scope.toDoList= new Object();
+                $scope.toDoList = new Object();
                 $scope.alarmtype = "";
                 $scope.sensor = "";
                 $scope.user = "";
@@ -47,7 +47,7 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
                 $scope.toDoList.todos = new Array();
                 $scope.newToDo = new Object();
             })
-            .error(function(data) {
+            .error(function (data) {
                 document.getElementById("errorMessage").style.display = "block";
                 document.getElementById("successMessage").style.display = "none";
                 console.log('Error: ' + data);
@@ -79,6 +79,69 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
             $mdDialog.hide(newToDo);
         }
 
-    }
+    };
+
+
+    $scope.readonly = false;
+    $scope.tags = [];
+    //$scope.selectedItem = null;
+    //$scope.searchText = null;
+    //$scope.querySearch = querySearch;
+    //$scope.vegetables = loadVegetables();
+    //$scope.selectedVegetables = [
+    //    {
+    //        'name': 'Broccoli'
+    //    },
+    //    {
+    //        'name': 'Cabbage'
+    //    }];
+    //$scope.numberChips = [];
+    //$scope.numberChips2 = [];
+    //$scope.numberBuffer = '';
+    //$scope.autocompleteDemoRequireMatch = false;
+    //$scope.transformChip = transformChip;
+    //
+    ///**
+    // * Return the proper object when the append is called.
+    // */
+    //function transformChip(chip) {
+    //    // If it is an object, it's already a known chip
+    //    if (angular.isObject(chip)) {
+    //        return chip;
+    //    }
+    //
+    //    // Otherwise, create a new one
+    //    return {name: chip, type: 'new'}
+    //}
+    //
+    ///**
+    // * Search for vegetables.
+    // */
+    //function querySearch(query) {
+    //    var results = loadVegetables();
+    //    return results;
+    //}
+    //
+    //function loadVegetables() {
+    //    return [
+    //        {
+    //            'name': 'Broccoli'
+    //        },
+    //        {
+    //            'name': 'Cabbage'
+    //        },
+    //        {
+    //            'name': 'Carrot'
+    //        },
+    //        {
+    //            'name': 'Lettuce'
+    //        },
+    //        {
+    //            'name': 'Spinach'
+    //        }
+    //    ];
+    //
+    //}
+
 });
 

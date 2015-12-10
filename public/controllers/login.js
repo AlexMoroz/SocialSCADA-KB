@@ -6,7 +6,6 @@ app.controller('loginCtrl', function($scope, $http, $state, notification, UserSe
                 $state.go('nav.home');
             })
             .error(function(data) {
-                console.log('Error: ', data);
                 notification("Alert", data.message);
             });
     }

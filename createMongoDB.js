@@ -19,8 +19,8 @@ printjson(db.getCollectionNames());
 // create data
 
 // User
-print('insert user data');
-db.user.insert({email: "joedoe@tum.de", firstname:"Joe",lastname:"Doe",password:"password", admin:true});
+print('insert user data'); // the password is "secret"
+db.user.insert({email: "joedoe@tum.de", firstname:"Joe",lastname:"Doe",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm", admin:true});
 db.user.insert({email: "adamgod@tum.de", firstname:"Adam",lastname:"God",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm",admin:false});
 db.user.insert({email: "evegod@tum.de", firstname:"Eve",lastname:"God",password:"$2a$10$iqJSHD.BGr0E2IxQwYgJmeP3NvhPrXAeLSaGCj6IR/XU5QtjVu5Tm",admin:false});
 

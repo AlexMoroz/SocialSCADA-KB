@@ -35,7 +35,6 @@ exports.login = {
                             reply(Boom.badRequest(message));
                             return;
                         }
-                        /*
                         Bcrypt.compare(request.payload.password, user.password, function (err, isValid) {
                             if(isValid) {
                                 var result = {
@@ -50,20 +49,6 @@ exports.login = {
                                 reply(Boom.badRequest(message));
                             }
                         });
-                        */
-
-                        if(request.payload.password == user.password) {
-                            var result = {
-                                name: user.firstname + ' ' + user.lastname,
-                                email: user.email
-                            };
-                            request.auth.session.set(result);
-                            return reply(result);
-                        } else {
-                            message = 'Incorrect login or password.';
-                            reply(Boom.badRequest(message));
-                        }
-
                     } else
                         return reply(Boom.badImplementation(err));
                 });
