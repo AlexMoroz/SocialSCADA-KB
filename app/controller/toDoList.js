@@ -28,6 +28,17 @@ exports.search = {
     }
 };
 
+exports.searchAPI = {
+    handler: function (request, reply) {
+        ToDoList.find({ tags: { "$size" : request.payload.length, "$in" : request.payload} },function (err, data) {
+            if (!err) {
+                return reply(data);
+            }
+            return reply(Boom.badImplementation(err)); // 500 error
+        });
+    }
+};
+
 exports.getAll = {
     handler: function (request, reply) {
         ToDoList.find(function (err, data) {
