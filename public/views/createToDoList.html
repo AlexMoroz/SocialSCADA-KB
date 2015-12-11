@@ -13,11 +13,11 @@
         <div flex-lg="80" flex-md="80" flex-sm="80" flex-gt-lg="80">
                 <md-input-container class="md-block">
                     <label>TODO list name</label>
-                    <input md-maxlength="30" required name="nameList" ng-model="ctrl.name">
+                    <input md-maxlength="30" required name="nameList" ng-model="toDoList.name">
                 </md-input-container>
                 <h2 class="md-title">Describe content of the TODO using tags</h2>
             <md-chips
-                    ng-model="tags"
+                    ng-model="toDoList.tags"
                     readonly="readonly"
                     placeholder="Enter a tag"
                     delete-button-label="Remove Tag"

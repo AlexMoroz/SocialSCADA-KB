@@ -27,11 +27,13 @@ db.user.insert({email: "evegod@tum.de", firstname:"Eve",lastname:"God",password:
 // ToDoList with ToDoList
 print('insert ToDoList data');
 db.todolist.insert({
+	name: "How to act in case of fire",
 	tags:["Joe Doe","fire","room 1"],
 	todos:[{name:"Call fire brigade",description:"Call 112 and tell them building xyz in street abc is burning"},
 		{name:"Run",description:"run away and never look back"}]
 });
 db.todolist.insert({
+	name: "How to act in case of high pressure",
 	tags:["Adam God","high pressure","room 2"],
 	todos:[{name:"Check pressure valve",description:"Turn the valve until green arrow appears"},
 		{name:"Pull lever",description:"Pull right lever"}]
