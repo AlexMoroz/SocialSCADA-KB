@@ -1,21 +1,14 @@
-
 <div ng-controller="createToDoListCtrl as ctrl" layout="column" ng-cloak
      class="md-inline-form">
-    <div class="ui red message" style="display: none;" id="errorMessage">
-        Error while saving ToDoList
-    </div>
-    <div class="ui green message" style="display:none" id="successMessage">
-        Success
-    </div>
     <div layout="row" layout-wrap>
         <div flex>
         </div>
         <div flex-lg="80" flex-md="80" flex-sm="80" flex-gt-lg="80">
-                <md-input-container class="md-block">
-                    <label>TODO list name</label>
-                    <input md-maxlength="30" required name="nameList" ng-model="toDoList.name">
-                </md-input-container>
-                <h2 class="md-title">Describe content of the TODO using tags</h2>
+            <md-input-container class="md-block">
+                <label>TODO list name</label>
+                <input md-maxlength="30" required name="nameList" ng-model="toDoList.name">
+            </md-input-container>
+            <h2 class="md-title">Describe content of the TODO using tags</h2>
             <md-chips
                     ng-model="toDoList.tags"
                     readonly="readonly"
@@ -23,6 +16,39 @@
                     delete-button-label="Remove Tag"
                     delete-hint="Press delete to remove tag"
                     secondary-placeholder="+Tag"></md-chips>
+            <br/>
+
+            <h1 class="md-title">Add parameters</h1>
+
+            <div layout="column">
+                <div layout="row">
+                    <md-input-container  flex="30">
+                        <label>Parameter Name</label>
+                        <input ng-model="paramName">
+                    </md-input-container>
+                    <md-input-container  flex="60">
+                        <label>Value</label>
+                        <input ng-model="paramValue">
+                    </md-input-container>
+                    <md-button class="md-raised" ng-click="addParam(paramName, paramValue)">Add</md-button>
+                </div>
+                <div layout="row" ng-repeat="param in parameters">
+                    <md-input-container  flex="30">
+                        <label>Parameter Name</label>
+                        <input ng-model="param.key" disabled>
+                    </md-input-container>
+                    <md-input-container  flex="60">
+                        <label>Value</label>
+                        <input ng-model="param.value" ng-disabled="param.edit == false">
+                    </md-input-container>
+                    <md-button class="md-raised" ng-show="param.edit == false"
+                               ng-click="param.edit = true;">Edit
+                    </md-button>
+                    <md-button class="md-raised" ng-show="param.edit == true"
+                               ng-click="saveParam(param.key, param.value);  param.edit = false;">Save
+                    </md-button>
+                </div>
+            </div>
             <br/>
             <h4>ToDos</h4>
             <table class="ui celled table" ng-show="toDoList.todos.length">

@@ -12,6 +12,10 @@ var ToDoListSchema = new Schema({
         todos: [{
             name: {type: String},
             description: {type: String}
+        }],
+        params: [{
+            key: {type: String},
+            value: {type: String}
         }]
 
     },
