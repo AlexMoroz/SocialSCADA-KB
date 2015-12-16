@@ -30,9 +30,24 @@ exports.search = {
 
 exports.searchAPI = {
     handler: function (request, reply) {
-        ToDoList.find({ tags: { $exists: true, "$in": request.payload }, $where: 'this.tags.length >= ' + request.payload.length },function (err, data) {
+        ToDoList.find({ tags: { $exists: true, "$in": request.payload } },function (err, data) {
             if (!err) {
-                return reply(data);
+                var result = [];
+                var count = 0;
+                for(var list of data) {
+                    count = 0;
+                    for(var resultTag of list.tags) {
+                        for(var searchTag of request.payload) {
+                            if (searchTag == resultTag) {
+                                count = count + 1;
+                            }
+                        }
+                    }
+                    if(count == request.payload.length) {
+                        result.push(list);
+                    }
+                }
+                return reply(result);
             }
             return reply(Boom.badImplementation(err)); // 500 error
         });
