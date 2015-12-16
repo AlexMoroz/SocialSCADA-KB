@@ -22,29 +22,33 @@
 
             <div layout="column">
                 <div layout="row">
-                    <md-input-container  flex="30">
+                    <md-input-container flex="30">
                         <label>Parameter Name</label>
                         <input ng-model="paramName">
                     </md-input-container>
-                    <md-input-container  flex="60">
+                    <md-input-container flex="60">
                         <label>Value</label>
                         <input ng-model="paramValue">
                     </md-input-container>
-                    <md-button class="md-raised" ng-click="addParam(paramName, paramValue)">Add</md-button>
+                    <md-button class="md-raised" style="height: 20px !important;  margin-top: 20px !important;"
+                               ng-click="addParam(paramName, paramValue)">Add
+                    </md-button>
                 </div>
-                <div layout="row" ng-repeat="param in parameters">
-                    <md-input-container  flex="30">
+                <div layout="row" ng-repeat="param in parameters" class="params">
+                    <md-input-container flex="30">
                         <label>Parameter Name</label>
                         <input ng-model="param.key" disabled>
                     </md-input-container>
-                    <md-input-container  flex="60">
+                    <md-input-container flex="60">
                         <label>Value</label>
                         <input ng-model="param.value" ng-disabled="param.edit == false">
                     </md-input-container>
-                    <md-button class="md-raised" ng-show="param.edit == false"
+                    <md-button class="md-raised" style="height: 20px !important;  margin-top: 20px !important;"
+                               ng-show="param.edit == false"
                                ng-click="param.edit = true;">Edit
                     </md-button>
-                    <md-button class="md-raised" ng-show="param.edit == true"
+                    <md-button class="md-raised" style="height: 20px !important;  margin-top: 20px !important;"
+                               ng-show="param.edit == true"
                                ng-click="saveParam(param.key, param.value);  param.edit = false;">Save
                     </md-button>
                 </div>
