@@ -2,7 +2,7 @@ var User = require('./controller/user'),
     Login = require('./controller/login'),
     Static = require('./static'),
     ToDoList = require('./controller/toDoList'),
-    ToDoListTemplate = require('./controller/toDoListTemplate');
+    AlarmMonitoringSystem = require('./controller/alarmMonitoringSystem');
 
 exports.endpoints = [
 
@@ -23,6 +23,7 @@ exports.endpoints = [
     {method: 'GET', path: '/toDoList/getAll', config: ToDoList.getAll},
     {method: 'POST', path: '/toDoList/search', config: ToDoList.search},
     {method: 'POST', path: '/toDoList/searchAPI', config: ToDoList.searchAPI},
-    {method: 'POST', path: '/toDoList/create', config: ToDoList.create}
-
+    {method: 'POST', path: '/toDoList/create', config: ToDoList.create},
+    {method: 'POST', path: '/AlarmMonitoringSystem/triggerAlarm', config: AlarmMonitoringSystem.triggerAlarm},
+    {method: 'GET', path: '/AlarmMonitoringSystem/alarmPanel', config: AlarmMonitoringSystem.alarmPanel}
 ];
