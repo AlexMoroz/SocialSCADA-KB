@@ -30,7 +30,7 @@ exports.search = {
 
 exports.searchAPI = {
     handler: function (request, reply) {
-        ToDoList.find({ tags: { $exists: true, "$in": request.payload } },function (err, data) {
+        ToDoList.find({ tags: { $exists: true, "$in": request.query.parameters } },function (err, data) {
             if (!err) {
                 var result = [];
                 var count = 0;
