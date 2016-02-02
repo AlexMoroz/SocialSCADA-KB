@@ -37,13 +37,13 @@ exports.searchAPI = {
                 for(var list of data) {
                     count = 0;
                     for(var resultTag of list.tags) {
-                        for(var searchTag of request.payload) {
+                        for(var searchTag of request.query.parameters) {
                             if (searchTag == resultTag) {
                                 count = count + 1;
                             }
                         }
                     }
-                    if(count == request.payload.length) {
+                    if(count == request.query.parameters.length) {
                         result.push(list);
                     }
                 }

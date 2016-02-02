@@ -42,7 +42,7 @@ app.controller('createToDoListCtrl', function ($scope, $http, $location, $mdDial
         //add parameters to toDoList
         $scope.toDoList.params = $scope.parameters;
         console.log($scope.toDoList);
-        $http.post('/createToDoList', $scope.toDoList)
+        $http.post('/ToDoList', $scope.toDoList)
             .success(function (data) {
                 console.log(data);
                 $scope.toDoList = new Object();

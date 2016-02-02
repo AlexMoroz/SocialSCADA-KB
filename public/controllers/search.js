@@ -4,7 +4,7 @@ app.controller('searchCtrl', function($scope, $http) {
     $scope.tags = [];
 
     // get all sensors
-    $http.get('/toDoList/getAll')
+    $http.get('/ToDoList')
         .success(function(data) {
             $scope.result = data;
         })
@@ -15,7 +15,7 @@ app.controller('searchCtrl', function($scope, $http) {
     $scope.search = function() {
         if($scope.tags.length == 0) {
             // get all sensors
-            $http.get('/toDoList/getAll')
+            $http.get('/ToDoList')
                 .success(function(data) {
                     $scope.result = data;
                 })
@@ -24,7 +24,7 @@ app.controller('searchCtrl', function($scope, $http) {
                 });
         }
         else {
-            $http.post('/toDoList/search', $scope.tags)
+            $http.post('/ToDoList/search', $scope.tags)
                 .success(function (data) {
                     $scope.tags = [];
                     $scope.result = data;
